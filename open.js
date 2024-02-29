@@ -31,4 +31,4 @@ var carasMascRef = [
     'https://lh3.googleusercontent.com/d/1LLbnITCTRxPXiXwOLCHVW5FqxScUgJHG',
 ];
 
-app.open(carasMascRef[0]);        //La buena con imagenes
+app.open("https://www.photopea.com/api/img2/pug.png");        //La buena con imagenes
