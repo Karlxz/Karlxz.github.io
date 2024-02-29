@@ -8,13 +8,13 @@ let btnCyan = document.querySelector("#cyan");
     btn.style.color="blue";
 })*/
 
-btnAzul.addEventListener("click", ()=>{
+btnAzul.addEventListener("click", async ()=>{
     //btnAzul.style.color="blue";
     Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,10)");
 })
 
 btnVerde.addEventListener("click", ()=>{
-    btnVerde.style.color="green";
+    btnVerde.style.color="blue";
 })
 
 btnRojo.addEventListener("click", ()=>{
