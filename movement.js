@@ -15,7 +15,7 @@ async function movement(){
     })
 
     btnVerde.addEventListener("click", ()=>{
-        btnVerde.style.color="blue";
+        btnVerde.style.color="cyan";
     })
 
     btnRojo.addEventListener("click", ()=>{
