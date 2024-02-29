@@ -1,8 +1,8 @@
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", function(){
-    btn.style.color="red";
     Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,10)");
+    btn.style.color="red";
 })  
 
 async function moveUp(){
