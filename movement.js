@@ -2,7 +2,8 @@ const btn = document.querySelector("button");
 
 btn.addEventListener("click", function(){
     btn.style.color="blue";
-})
+    Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,10)");
+})  
 
 async function moveUp(){
     //app.activeDocument.activeLayer.translate(0,10);
