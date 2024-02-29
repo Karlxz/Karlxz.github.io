@@ -1,11 +1,32 @@
-const btn = document.querySelector("button");
+let btnAzul = document.querySelector("#azul");
+let btnVerde = document.querySelector("#rojo");
+let btnRojo = document.querySelector("#verde");
+let btnCyan = document.querySelector("#cyan");
 
-btn.addEventListener("click", function(){
+/*btn.addEventListener("click", function(){
+    //Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,10)");
+    btn.style.color="blue";
+})*/
+
+btnAzul.addEventListener("click", ()=>{
+    //btnAzul.style.color="blue";
     Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,10)");
-    btn.style.color="red";
-})  
+})
 
-async function moveUp(){
+btnVerde.addEventListener("click", ()=>{
+    btnVerde.style.color="green";
+})
+
+btnRojo.addEventListener("click", ()=>{
+    btnRojo.style.color="red";
+})
+
+btnCyan.addEventListener("click", ()=>{
+    btnCyan.style.color="cyan";
+})
+
+
+/*async function moveUp(){
     //app.activeDocument.activeLayer.translate(0,10);
     await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,10)");
 }
@@ -28,4 +49,4 @@ async function moveLeft(){
 async function open(){
     await Photopea.runScript(window.parent, "app.documents.add(800, 700, 72, 'Caramex')");
     await Photopea.runScript(window.parent, "app.UI.fitTheArea()");
-}
+}*/
