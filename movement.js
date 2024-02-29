@@ -1,7 +1,7 @@
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", function(){
-    btn.style.color="blue";
+    btn.style.color="red";
     Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,10)");
 })  
 
