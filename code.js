@@ -1,3 +1,1 @@
-setup().then(function() {
-    update();
-});
+open();

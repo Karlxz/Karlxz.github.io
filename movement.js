@@ -18,7 +18,7 @@ async function moveLeft(){
     await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(-10,0)");
 }
 
-async function setup(){
+async function open(){
     await Photopea.runScript(window.parent, "app.documents.add(800, 700, 72, 'Caramex')");
     await Photopea.runScript(window.parent, "app.UI.fitTheArea()");
 }
