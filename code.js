@@ -1,1 +1,3 @@
-//open();
+setup().then(function(){
+    movement();
+});

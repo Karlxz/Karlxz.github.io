@@ -1,7 +1,7 @@
 var playerPos, frame, playerYVelocity, clicked, obstaclesPos, gameOn, coinPos, score, scrollSpeed;
 
 async function setup() {
-    playerPos = [300, 350];
+    /*playerPos = [300, 350];
     frame = 0;
     playerYVelocity = 0;
     clicked = false;
@@ -34,15 +34,15 @@ async function setup() {
         r: 36,
     };
     score = 0;
-    scrollSpeed = 3;
+    scrollSpeed = 3;*/
 
-    await Photopea.runScript(window.parent, "app.documents.add(800, 700, 72, 'Flappy Ivan Kutskir')");
+    await Photopea.runScript(window.parent, "app.documents.add(800, 700, 72, 'CARAMEX')");
     await Photopea.runScript(window.parent, "app.UI.fitTheArea()");
 
-    await addImageAndWait(window.parent, "https://yikuansun.github.io/photopea-flappyIvan/img/bgPlate.png");
-    await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "bgPlate";`);
+    await addImageAndWait(window.parent, "https://www.photopea.com/api/img2/pug.png");
+    await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "BG";`);
 
-    await addImageAndWait(window.parent, "https://yikuansun.github.io/photopea-flappyIvan/img/ivanHead.png");
+    /*await addImageAndWait(window.parent, "https://yikuansun.github.io/photopea-flappyIvan/img/ivanHead.png");
     await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "ivanHead";`);
 
     for (var i = 0; i < obstaclesPos.length; i++) {
@@ -58,7 +58,7 @@ async function setup() {
     app.activeDocument.activeLayer.kind = LayerKind.TEXT;
     app.activeDocument.activeLayer.textItem.contents = "hello world";`);
     await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.textItem.size = 24;`);
-    await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "scoreCounter";`);
+    await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "scoreCounter";`);*/
 
     return new Promise(function(resolve, reject) {
         resolve();

@@ -1,29 +1,31 @@
-let btnAzul = document.querySelector("#azul");
-let btnVerde = document.querySelector("#rojo");
-let btnRojo = document.querySelector("#verde");
-let btnCyan = document.querySelector("#cyan");
+async function movement(){
+    let btnAzul = document.querySelector("#azul");
+    let btnVerde = document.querySelector("#rojo");
+    let btnRojo = document.querySelector("#verde");
+    let btnCyan = document.querySelector("#cyan");
 
-/*btn.addEventListener("click", function(){
-    //Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,10)");
-    btn.style.color="blue";
-})*/
+    /*btn.addEventListener("click", function(){
+        //Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,10)");
+        btn.style.color="blue";
+    })*/
 
-btnAzul.addEventListener("click", async ()=>{
-    //btnAzul.style.color="blue";
-    Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,10)");
-})
+    btnAzul.addEventListener("click", async ()=>{
+        //btnAzul.style.color="blue";
+        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(20,20)");
+    })
 
-btnVerde.addEventListener("click", ()=>{
-    btnVerde.style.color="blue";
-})
+    btnVerde.addEventListener("click", ()=>{
+        btnVerde.style.color="blue";
+    })
 
-btnRojo.addEventListener("click", ()=>{
-    btnRojo.style.color="red";
-})
+    btnRojo.addEventListener("click", ()=>{
+        btnRojo.style.color="red";
+    })
 
-btnCyan.addEventListener("click", ()=>{
-    btnCyan.style.color="cyan";
-})
+    btnCyan.addEventListener("click", ()=>{
+        btnCyan.style.color="cyan";
+    })
+}
 
 
 /*async function moveUp(){
