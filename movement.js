@@ -19,7 +19,7 @@ async function movement(){
     })
 
     await btnRojo.addEventListener("click", ()=>{
-        btnRojo.style.color="red";
+        btnRojo.style.color="cyan";
     })
 
     await btnCyan.addEventListener("click", ()=>{
