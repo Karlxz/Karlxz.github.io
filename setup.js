@@ -60,6 +60,8 @@ async function setup() {
     await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.textItem.size = 24;`);
     await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "scoreCounter";`);*/
 
+    openAlready = true;
+
     return new Promise(function(resolve, reject) {
         resolve();
     });
