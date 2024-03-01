@@ -35,14 +35,12 @@ async function setup() {
     };
     score = 0;
     scrollSpeed = 3;*/
-    /*console.log("Uno");
+    
     await Photopea.runScript(window.parent, "app.documents.add(800, 700, 72, 'CARAMEX')");
     await Photopea.runScript(window.parent, "app.UI.fitTheArea()");
-    console.log("Dos");
     
     await addImageAndWait(window.parent, "https://Karlxz.github.io/img/pug.png");
     await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "BG";`);
-    console.log("Tres");*/
     
     /*await addImageAndWait(window.parent, "https://yikuansun.github.io/photopea-flappyIvan/img/ivanHead.png");
     await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "ivanHead";`);

@@ -11,11 +11,11 @@ async function movement(){
 
     await btnUp.addEventListener("click", ()=>{
         //btnAzul.style.color="blue";
-        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,2)");
+        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,-2)");
     })
 
     await btnDown.addEventListener("click", ()=>{
-        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,-2)");
+        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,2)");
     })
 
     await btnLeft.addEventListener("click", ()=>{
