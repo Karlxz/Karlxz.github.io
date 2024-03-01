@@ -1,29 +1,29 @@
 async function movement(){
-    let btnAzul = document.querySelector("#azul");
-    let btnVerde = document.querySelector("#rojo");
-    let btnRojo = document.querySelector("#verde");
-    let btnCyan = document.querySelector("#cyan");
+    let btnUp = document.querySelector("#up");
+    let btnDown = document.querySelector("#down");
+    let btnLeft = document.querySelector("#left");
+    let btnRight = document.querySelector("#right");
 
     /*btn.addEventListener("click", function(){
         //Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,10)");
         btn.style.color="blue";
     })*/
 
-    await btnAzul.addEventListener("click", ()=>{
+    await btnUp.addEventListener("click", ()=>{
         //btnAzul.style.color="blue";
-        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(20,20)");
+        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,2)");
     })
 
-    await btnVerde.addEventListener("click", ()=>{
-        btnVerde.style.color="cyan";
+    await btnDown.addEventListener("click", ()=>{
+        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,-2)");
     })
 
-    await btnRojo.addEventListener("click", ()=>{
-        btnRojo.style.color="cyan";
+    await btnLeft.addEventListener("click", ()=>{
+        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(-2,0)");
     })
 
-    await btnCyan.addEventListener("click", ()=>{
-        btnCyan.style.color="cyan";
+    await btnRight.addEventListener("click", ()=>{
+        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(2,0)");
     })
 }
 
