@@ -9,20 +9,20 @@ async function movement(){
         btn.style.color="blue";
     })*/
 
-    btnAzul.addEventListener("click", async ()=>{
+    await btnAzul.addEventListener("click", ()=>{
         //btnAzul.style.color="blue";
         Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(20,20)");
     })
 
-    btnVerde.addEventListener("click", ()=>{
+    await btnVerde.addEventListener("click", ()=>{
         btnVerde.style.color="cyan";
     })
 
-    btnRojo.addEventListener("click", ()=>{
+    await btnRojo.addEventListener("click", ()=>{
         btnRojo.style.color="red";
     })
 
-    btnCyan.addEventListener("click", ()=>{
+    await btnCyan.addEventListener("click", ()=>{
         btnCyan.style.color="cyan";
     })
 }
