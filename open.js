@@ -32,5 +32,6 @@ async function open(rostro){
         'https://lh3.googleusercontent.com/d/1LLbnITCTRxPXiXwOLCHVW5FqxScUgJHG',
     ];
 
+    //console.log(carasMascRef[0]);
     return carasMascRef[rostro];        //La buena con imagenes
 }
