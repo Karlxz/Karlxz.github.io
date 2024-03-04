@@ -36,8 +36,8 @@ async function setup() {
     score = 0;
     scrollSpeed = 3;*/
     
-    await Photopea.runScript(window.parent, "app.documents.add(800, 700, 72, 'CARAMEX')");
-    await Photopea.runScript(window.parent, "app.UI.fitTheArea()");
+    //await Photopea.runScript(window.parent, "app.documents.add(800, 700, 72, 'CARAMEX')");
+    //await Photopea.runScript(window.parent, "app.UI.fitTheArea()");
     
     await addImageAndWait(window.parent, openData(0));
     await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "BG";`);
