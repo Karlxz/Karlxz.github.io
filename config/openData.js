@@ -1,4 +1,4 @@
-async function openData(imagen){
+function openData(imagen){
     
     var carasMascRef = [
         //29 rostros masculinos
