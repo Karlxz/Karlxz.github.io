@@ -1,4 +1,4 @@
-async function open(){
+async function open(rostro){
     var carasMascRef = [
         'https://lh3.googleusercontent.com/d/1nkd5gDym6-7xFCJ0-w4nPM0Zs7vwPGdT',
         'https://lh3.googleusercontent.com/d/1plPihb2D8DdJXRAMlYMN6fPCBnaqZBmn',
@@ -32,5 +32,5 @@ async function open(){
         'https://lh3.googleusercontent.com/d/1LLbnITCTRxPXiXwOLCHVW5FqxScUgJHG',
     ];
 
-    return carasMascRef[0];        //La buena con imagenes
+    return carasMascRef[rostro];        //La buena con imagenes
 }
