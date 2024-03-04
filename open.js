@@ -1,5 +1,6 @@
-async function open(rostro){
+async function openFace(rostro){
     var carasMascRef = [
+        //29 rostros masculinos
         "https://lh3.googleusercontent.com/d/1nkd5gDym6-7xFCJ0-w4nPM0Zs7vwPGdT",
         "https://lh3.googleusercontent.com/d/1plPihb2D8DdJXRAMlYMN6fPCBnaqZBmn",
         "https://lh3.googleusercontent.com/d/1o66kiIu1VqrLmejrpG3BWSRkwlZAURmH",
@@ -30,6 +31,8 @@ async function open(rostro){
         "https://lh3.googleusercontent.com/d/16F6O3ZbByZkNzcphkLBG0YvJRDYkluPh",
         "https://lh3.googleusercontent.com/d/1gVn2owZcOlHpFe4TZOjD9CiGjGWQIucd",
         "https://lh3.googleusercontent.com/d/1LLbnITCTRxPXiXwOLCHVW5FqxScUgJHG",
+
+        //Rostros femeninos
     ];
 
     //console.log(carasMascRef[0]);
