@@ -1,9 +1,9 @@
 async function openData(rostro){
     var carasMascRef = [
         //29 rostros masculinos
-        "https://lh3.googleusercontent.com/d/1nkd5gDym6-7xFCJ0-w4nPM0Zs7vwPGdT",
-        "https://lh3.googleusercontent.com/d/1plPihb2D8DdJXRAMlYMN6fPCBnaqZBmn",
-        "https://lh3.googleusercontent.com/d/1o66kiIu1VqrLmejrpG3BWSRkwlZAURmH",
+        "https://lh3.googleusercontent.com/d/1nkd5gDym6-7xFCJ0-w4nPM0Zs7vwPGdT.png",
+        "https://lh3.googleusercontent.com/d/1plPihb2D8DdJXRAMlYMN6fPCBnaqZBmn.png",
+        "https://lh3.googleusercontent.com/d/1o66kiIu1VqrLmejrpG3BWSRkwlZAURmH.png",
         "https://lh3.googleusercontent.com/d/1ZaZSY29d8OaXGn3xCjWz6sn1BNmdO4bA",
         "https://lh3.googleusercontent.com/d/1kTYNT662lpiBqW4Ky229xctJ_felQDcY",
         "https://lh3.googleusercontent.com/d/1QAubZcnkzJ2Wge2eOIccTCcUgyCeAkqd",
