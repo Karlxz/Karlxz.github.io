@@ -1,4 +1,4 @@
-async function openFace(rostro){
+async function openData(rostro){
     var carasMascRef = [
         //29 rostros masculinos
         "https://lh3.googleusercontent.com/d/1nkd5gDym6-7xFCJ0-w4nPM0Zs7vwPGdT",
