@@ -39,8 +39,10 @@ async function setup() {
     //await Photopea.runScript(window.parent, "app.documents.add(800, 700, 72, 'CARAMEX')");
     //await Photopea.runScript(window.parent, "app.UI.fitTheArea()");
     
-    await addImageAndWait(window.parent, openData(0));
-    await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "BG";`);
+    if(app.activeDocument.layers.getByName("Cara") == null){
+        await addImageAndWait(window.parent, openData(0));
+        await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cara";`);
+    }
     
     /*await addImageAndWait(window.parent, "https://yikuansun.github.io/photopea-flappyIvan/img/ivanHead.png");
     await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "ivanHead";`);
