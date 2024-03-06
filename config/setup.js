@@ -42,8 +42,8 @@ async function setup() {
     // if(!app.activeDocument.layers.getByName("Cara")){
     // }
     
-    //await addImageAndWait(window.parent, openData(0));
-    //await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cara";`);
+    await addImageAndWait(window.parent, openData(0));
+    await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cara";`);
     
     /*await addImageAndWait(window.parent, "https://yikuansun.github.io/photopea-flappyIvan/img/ivanHead.png");
     await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "ivanHead";`);
