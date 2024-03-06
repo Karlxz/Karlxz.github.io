@@ -14,49 +14,68 @@ async function movement(){
         //Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,10)");
         btn.style.color="blue";
     })*/
+    if(btnUp){
+        await btnUp.addEventListener("click", ()=>{
+            //btnAzul.style.color="blue";
+            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,-2)");
+        })
+    }
 
-    await btnUp.addEventListener("click", ()=>{
-        //btnAzul.style.color="blue";
-        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,-2)");
-    })
+    if(btnDown){
+        await btnDown.addEventListener("click", ()=>{
+            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,2)");
+        })
+    }
+    
+    if(btnLeft){
+        await btnLeft.addEventListener("click", ()=>{
+            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(-2,0)");
+        })
+    }
 
-    await btnDown.addEventListener("click", ()=>{
-        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,2)");
-    })
+    if(btnRight){
+        await btnRight.addEventListener("click", ()=>{
+            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(2,0)");
+        })
+    }
 
-    await btnLeft.addEventListener("click", ()=>{
-        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(-2,0)");
-    })
+    if(btnverResMin){
+        await btnverResMin.addEventListener("click", ()=>{
+            //btnAzul.style.color="blue";
+            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(100,99)");
+        })
+    }
 
-    await btnRight.addEventListener("click", ()=>{
-        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(2,0)");
-    })
+    if(btnverResMax){
+        await btnverResMax.addEventListener("click", ()=>{
+            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(100,101)");
+        })
+    }
 
-    await btnverResMin.addEventListener("click", ()=>{
-        //btnAzul.style.color="blue";
-        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(100,99)");
-    })
+    if(btnHorResMin){
+        await btnHorResMin.addEventListener("click", ()=>{
+            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(99,100)");
+        })    
+    }
 
-    await btnverResMax.addEventListener("click", ()=>{
-        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(100,101)");
-    })
+    if(btnHorResMax){
+        await btnHorResMax.addEventListener("click", ()=>{
+            //btnAzul.style.color="blue";
+            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(101,100)");
+        })
+    }
 
-    await btnHorResMin.addEventListener("click", ()=>{
-        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(99,100)");
-    })
+    if(btnFullResMin){
+        await btnFullResMin.addEventListener("click", ()=>{
+            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(99,99)");
+        })
+    }
 
-    await btnHorResMax.addEventListener("click", ()=>{
-        //btnAzul.style.color="blue";
-        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(101,100)");
-    })
-
-    await btnFullResMin.addEventListener("click", ()=>{
-        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(99,99)");
-    })
-
-    await btnFullResMax.addEventListener("click", ()=>{
-        Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(101,101)");
-    })
+    if(btnFullResMax){
+        await btnFullResMax.addEventListener("click", ()=>{
+            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(101,101)");
+        })
+    }
 }
 
 
