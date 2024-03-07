@@ -9,7 +9,7 @@ async function setup() {
         if(imgCaras[i]){
             await imgCaras[i].addEventListener("click", async ()=>{
                 let layCara = Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara");`);
-                if(!layCara){
+                if(layCara == null){
                     await addImageAndWait(window.parent, openData(i));
                     await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cara";`);
                 }
