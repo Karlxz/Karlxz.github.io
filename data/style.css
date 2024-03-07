@@ -8,9 +8,9 @@
 .buttonMenu{
     display: inline-block;
     padding: 15px 0px;
-    font-size: 15px;
+    font-size: 10px;
     cursor: pointer;
-    width: 35%;
+    width: 50%;
     text-align: center;
     color: #fff;
     background-color: #000001;
@@ -39,3 +39,9 @@
     width: 50%;
     text-align: center;
   }
+
+.prueba {
+    background-color: #803cb9;
+    width: 100px;
+    height: 100px;
+}
