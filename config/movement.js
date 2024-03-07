@@ -13,7 +13,6 @@ async function movement(){
 
     if(btnUp){
         await btnUp.addEventListener("click", ()=>{
-            //btnAzul.style.color="blue";
             Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,-2)");
             //console.log("Funciona");
         })
@@ -39,7 +38,6 @@ async function movement(){
 
     if(btnverResMin){
         await btnverResMin.addEventListener("click", ()=>{
-            //btnAzul.style.color="blue";
             Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(100,99)");
             //console.log("Tambien funciona");
         })
@@ -59,7 +57,6 @@ async function movement(){
 
     if(btnHorResMax){
         await btnHorResMax.addEventListener("click", ()=>{
-            //btnAzul.style.color="blue";
             Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(101,100)");
         })
     }
