@@ -4,11 +4,11 @@ async function setup() {
     //await Photopea.runScript(window.parent, "app.UI.fitTheArea()");
     
     // if(!app.activeDocument.layers.getByName("Cara")){
-    // }
+    // }|
     for(let i = 0; i < 16; i++){
         if(imgCaras[i]){
             await imgCaras[i].addEventListener("click", async ()=>{
-                await addImageAndWait(window.parent, openData(0));
+                await addImageAndWait(window.parent, openData(i));
                 await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cara";`);
             })
         }
