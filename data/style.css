@@ -1,8 +1,7 @@
 .imgData{
     border: 1px none #FFF;
     border-radius: 15px;
-    padding: 10px;
-    width: 110px;
+    width: 15%
 }
 
 .buttonMenu{
@@ -27,6 +26,7 @@
   }
   
 .izq {
+    background-color: chartreuse;
     float: left;
     height: 100%;
     width: 50%;
@@ -34,14 +34,31 @@
   }
   
 .der {
-    float: right;
+    background-color: beige;
     height: 100%;
-    width: 50%;
     text-align: center;
   }
 
+/* .up{
+    background-color: aqua;
+    height:100px;
+    text-align: left;
+} */
+
 /* .prueba {
     background-color: #803cb9;
-    width: 100px;
+    width: 300px;
     height: 100px;
-} */
+} 
+
+div.div1 {
+  background: #999;
+  float: left;
+  height: 100%;
+  width: auto;
+}
+
+div.div2 {
+  background: #666;
+  height: 100%;
+}*/
