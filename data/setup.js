@@ -1,5 +1,3 @@
-
-
 async function setup() {
     
     //await Photopea.runScript(window.parent, "app.documents.add(800, 700, 72, 'CARAMEX')");
@@ -9,9 +7,9 @@ async function setup() {
     // }
     for(let i = 0; i < 16; i++){
         if(imgCaras[i]){
-            await imgCaras[i].addEventListener("click", ()=>{
-                //Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,-2)");
-                console.log("Funciona");
+            await imgCaras[i].addEventListener("click", async ()=>{
+                await addImageAndWait(window.parent, openData(0));
+                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cara";`);
             })
         }
     }
