@@ -1,6 +1,41 @@
 .imgData{
     border: 1px none #FFF;
     border-radius: 15px;
-    padding: 5px;
-    width: 100px;
+    padding: 10px;
+    width: 110px;
 }
+
+.buttonMenu{
+    display: inline-block;
+    padding: 15px 0px;
+    font-size: 15px;
+    cursor: pointer;
+    width: 35%;
+    text-align: center;
+    color: #fff;
+    background-color: #000001;
+    border-radius: 15px;
+    box-shadow: 0 0px #000000;
+    margin: 10px auto;
+}
+
+.buttonMenu:hover {background-color: #0413169f}
+
+.buttonMenu:active {
+    background-color: #0413169f;
+    transform: translateY(4px);
+  }
+  
+.izq {
+    float: left;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+  }
+  
+.der {
+    float: right;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+  }
