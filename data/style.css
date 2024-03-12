@@ -12,10 +12,28 @@
     width: 75%;
     text-align: center;
     color: #fff;
-    background-color: #000001;
+    background-color: #000000;
     border-radius: 15px;
     box-shadow: 0 0px #000000;
     margin: 10px auto;
+}
+
+.exitBtn{
+  display: inline-block;
+    padding: 15px 50px;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    background-color: #404090;
+    border-radius: 15px;
+    box-shadow: 0 0px #000000;
+    margin: 10px auto;
+}
+
+.exitBtn:active{
+  background-color: #0413169f;
+  transform: translateY(4px);
 }
 
 .buttonMenu:hover {background-color: #0413169f}
@@ -26,7 +44,7 @@
   }
   
 .izq {
-    background-color: chartreuse;
+    /* background-color: chartreuse; */
     float: left;
     height: 100%;
     width: 50%;
@@ -34,7 +52,7 @@
   }
   
 .der {
-    background-color: beige;
+    /* background-color: beige; */
     float: right;
     height: 100%;
     width: 50%;
@@ -42,9 +60,9 @@
   }
 
 .top{
-    background-color: aqua;
+    /* background-color: aqua; */
     float: none;
-    height:100px;
+    height:75px;
     text-align: left;
 }
 
