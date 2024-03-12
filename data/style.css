@@ -35,15 +35,18 @@
   
 .der {
     background-color: beige;
+    float: right;
     height: 100%;
+    width: 50%;
     text-align: center;
   }
 
-/* .up{
+.top{
     background-color: aqua;
+    float: none;
     height:100px;
     text-align: left;
-} */
+}
 
 /* .prueba {
     background-color: #803cb9;
