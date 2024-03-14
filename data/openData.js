@@ -2,7 +2,7 @@ function openData(imagen){
     
     var carasMascRef = [
         //29 rostros masculinos
-        "https://lh3.googleusercontent.com/d/1nkd5gDym6-7xFCJ0-w4nPM0Zs7vwPGdT",    //1
+        "https://Karlxz.github.io/img/caras/J3_M1267.png",    //1
         "https://lh3.googleusercontent.com/d/1plPihb2D8DdJXRAMlYMN6fPCBnaqZBmn",    //2
         "https://lh3.googleusercontent.com/d/1o66kiIu1VqrLmejrpG3BWSRkwlZAURmH",    //3
         "https://lh3.googleusercontent.com/d/1ZaZSY29d8OaXGn3xCjWz6sn1BNmdO4bA",    //4
@@ -60,7 +60,7 @@ function openData(imagen){
         "https://lh3.googleusercontent.com/d/1eq_WglfRYCvfv9HPgpXWeC_Ab4sajrfy",    //25
         
         //Ojos masculinos
-        "https://lh3.googleusercontent.com/d/1Eln27cNFDUFSasgMbr6sTHhAAw0ZbIV4",    //1
+        "https://Karlxz.github.io/img/caras/F4_M0123.png",    //1
     ];
 
     return carasMascRef[imagen];
