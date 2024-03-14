@@ -1,11 +1,26 @@
 async function setup() {
-    
+    let btnMasc = document.querySelector("#masculino");
+    let btnFem = document.querySelector("#femenino");
     //await Photopea.runScript(window.parent, "app.documents.add(800, 700, 72, 'CARAMEX')");
     //await Photopea.runScript(window.parent, "app.UI.fitTheArea()");
     
     // if(!app.activeDocument.layers.getByName("Cara")){
-    // }|
-    for(let i = 0; i < 16; i++){
+    // }
+    if (btnMasc){
+        await btnMasc.addEventListener("click", ()=>{
+            divMasc.style.display = 'block';
+            divFem.style.display = 'none';
+        })
+    }
+    if(btnFem){
+        await btnFem.addEventListener("click", ()=>{
+            divMasc.style.display = 'none';
+            divFem.style.display = 'block';
+        })
+    }
+
+
+    for(let i = 0; i < 54 ; i++){
         if(imgCaras[i]){
             await imgCaras[i].addEventListener("click", async ()=>{
                 // if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara");`)){
@@ -16,6 +31,19 @@ async function setup() {
             })
         }
     }
+
+    for(let i = 0; i < 1 ; i++){
+        if(imgCaras[i]){
+            await imgCaras[i].addEventListener("click", async ()=>{
+                // if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara");`)){
+                // }else{
+                    await addImageAndWait(window.parent, openData(i+54));
+                    await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Ojos";`);
+                // }
+            })
+        }
+    }
+    
 
     // await addImageAndWait(window.parent, openData(0));
     // await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cara";`);

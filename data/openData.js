@@ -31,11 +31,40 @@ function openData(imagen){
         "https://lh3.googleusercontent.com/d/1ucTvYqnXA_J7zsm_UEi133DsYInmnFIq",    //27
         "https://lh3.googleusercontent.com/d/16F6O3ZbByZkNzcphkLBG0YvJRDYkluPh",    //28
         "https://lh3.googleusercontent.com/d/1gVn2owZcOlHpFe4TZOjD9CiGjGWQIucd",    //29
-        "https://lh3.googleusercontent.com/d/1LLbnITCTRxPXiXwOLCHVW5FqxScUgJHG",    //
-
-        //Rostros femeninos
+        
+        //25 Rostros femeninos
+        "https://lh3.googleusercontent.com/d/1oKKsammJeqN81QoQW7rWLQvUwHUdQq4q",    //1
+        "https://lh3.googleusercontent.com/d/14wZ26tq7Xx3gbzIPj41nm5Vr4Y_WS1Le",    //2
+        "https://lh3.googleusercontent.com/d/18l5-JcWbjsK8R7-1gHk_rb3VX8tR5ZJY",    //3
+        "https://lh3.googleusercontent.com/d/13p46aVleCKmI5Ql6ytMrx1X0GcATGqWe",    //4
+        "https://lh3.googleusercontent.com/d/1rZ7yocApJe8nDp7Lts0DlbKZhefSrkKB",    //5
+        "https://lh3.googleusercontent.com/d/1My2CP6nhVB5LO1hSrxzuj_Y7IZQndyrH",    //6
+        "https://lh3.googleusercontent.com/d/1NCrH_CMyug2TAaJFVQDNzzqJSG8qWvFU",    //7
+        "https://lh3.googleusercontent.com/d/1k6CSQQ4or_ePJtep7ddIq5D6y5fl8idQ",    //8
+        "https://lh3.googleusercontent.com/d/1iBNlHEAFZXn0n_YphrKVl4JZf9_BJNin",    //9
+        "https://lh3.googleusercontent.com/d/16CrtrVdRJY6DbfSG0YvQPRpNmow5Q94u",    //10
+        "https://lh3.googleusercontent.com/d/1r6HwbNKeDS-qI4m-c9fqoTMhR5caXrVT",    //11
+        "https://lh3.googleusercontent.com/d/1sTNNLZhLDP40gV6HboolcDIuQxJCp6iF",    //12
+        "https://lh3.googleusercontent.com/d/1Jd2_mPvqKUVALw1VpFOG8aqhGVC3VZBW",    //13
+        "https://lh3.googleusercontent.com/d/1Sf8iWJZ4GcLQjqbcbuC8FJqvZc80oeXr",    //14
+        "https://lh3.googleusercontent.com/d/19WGvdJBhgRvuGMZrRHqKo-zH4QxG9aIC",    //15
+        "https://lh3.googleusercontent.com/d/15uEYxd35mOI8nkpVclkUvKFfkIpFV2hf",    //16
+        "https://lh3.googleusercontent.com/d/1kRZjALIp5UvLRJeQ2umsecXSA-mgcLQU",    //17
+        "https://lh3.googleusercontent.com/d/1muXKk9-5C1R0VViExrMAMT0UKPpbTk0O",    //18
+        "https://lh3.googleusercontent.com/d/1sUvCuiUDhZfhG9wIvMp8SXCTzNYrRD3u",    //19
+        "https://lh3.googleusercontent.com/d/1hprqvI6QD_F1h5FTVbYlvp5JwiUuAxMB",    //20
+        "https://lh3.googleusercontent.com/d/142fjuR1hu1hHIKCcbPMYsz_3aOtjFBsq",    //21
+        "https://lh3.googleusercontent.com/d/19v2WgFOjAIPnq3-qmnT55iBMkRXH4HVj",    //22
+        "https://lh3.googleusercontent.com/d/1V65HHSAyLvH3iEjX5RfPAD2hP_UkWtb5",    //23
+        "https://lh3.googleusercontent.com/d/1GBkHjlJFrtk8mP-5LeFUuoDq2pBFWY_t",    //24
+        "https://lh3.googleusercontent.com/d/1eq_WglfRYCvfv9HPgpXWeC_Ab4sajrfy",    //25
+        
+        //Ojos masculinos
+        "https://lh3.googleusercontent.com/d/1Eln27cNFDUFSasgMbr6sTHhAAw0ZbIV4",    //1
     ];
 
     return carasMascRef[imagen];
+}   
 
-}
+
+
