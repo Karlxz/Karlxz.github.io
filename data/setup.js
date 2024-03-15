@@ -32,15 +32,15 @@ async function setup() {
         }
     }
 
-    for(let i = 0; i < 1 ; i++){
+    for(let i = 0; i < 74 ; i++){
         if(imgOjos[i]){
             await imgOjos[i].addEventListener("click", async ()=>{
-                // if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara");`)){
-                // }else{
-                    await addImageAndWait(window.parent, openData(i+54)); //24
-                    await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,-24)")
-                    await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Ojos";`);
-                // }
+                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Ojos");`))
+                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Ojos").remove();`);
+
+                await addImageAndWait(window.parent, openData(i+54)); //24
+                await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,-24)")
+                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Ojos";`);
             })
         }
     }

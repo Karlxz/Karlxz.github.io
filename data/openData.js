@@ -61,6 +61,81 @@ function openData(imagen){
         
         //Ojos masculinos
         "https://Karlxz.github.io/img/ojos/masculino/F4_M0123.png",    //1
+        "https://Karlxz.github.io/img/ojos/masculino/F3_M0507.png",    //2
+        "https://Karlxz.github.io/img/ojos/masculino/F2_M0065.png",    //3
+        "https://Karlxz.github.io/img/ojos/masculino/F1_M0251.png",    //4
+        "https://Karlxz.github.io/img/ojos/masculino/E7_M2731.png",    //5
+        "https://Karlxz.github.io/img/ojos/masculino/E6_M2238.png",    //6
+        "https://Karlxz.github.io/img/ojos/masculino/E5_M2694.png",    //7
+        "https://Karlxz.github.io/img/ojos/masculino/E4_M1418.png",    //8
+        "https://Karlxz.github.io/img/ojos/masculino/E3_M1290.png",    //9
+        "https://Karlxz.github.io/img/ojos/masculino/E2_M1318.png",    //10
+        "https://Karlxz.github.io/img/ojos/masculino/E1_M0269.png",    //11
+        "https://Karlxz.github.io/img/ojos/masculino/D7_M1065.png",    //12
+        "https://Karlxz.github.io/img/ojos/masculino/D6_M0280.png",    //13
+        "https://Karlxz.github.io/img/ojos/masculino/D5_M2257.png",    //14
+        "https://Karlxz.github.io/img/ojos/masculino/D4_M1407.png",    //15
+        "https://Karlxz.github.io/img/ojos/masculino/D3_M0578.png",    //16
+        "https://Karlxz.github.io/img/ojos/masculino/D2_M2546.png",    //17
+        "https://Karlxz.github.io/img/ojos/masculino/D1_M0620.png",    //18
+        "https://Karlxz.github.io/img/ojos/masculino/C7_M1299.png",    //19
+        "https://Karlxz.github.io/img/ojos/masculino/C6_M0236.png",    //20
+        "https://Karlxz.github.io/img/ojos/masculino/C5_M0754.png",    //21
+        "https://Karlxz.github.io/img/ojos/masculino/C4_M2400.png",    //22
+        "https://Karlxz.github.io/img/ojos/masculino/C3_M0323.png",    //23
+        "https://Karlxz.github.io/img/ojos/masculino/C2_M0204.png",    //24
+        "https://Karlxz.github.io/img/ojos/masculino/C1_M1021.png",    //25
+        "https://Karlxz.github.io/img/ojos/masculino/B7_M0830.png",    //26
+        "https://Karlxz.github.io/img/ojos/masculino/B6_M1046.png",    //27
+        "https://Karlxz.github.io/img/ojos/masculino/B5_M1766.png",    //28
+        "https://Karlxz.github.io/img/ojos/masculino/B4_M1283.png",    //29
+        "https://Karlxz.github.io/img/ojos/masculino/B3_M1583.png",    //30
+        "https://Karlxz.github.io/img/ojos/masculino/B2_M1483.png",    //31
+        "https://Karlxz.github.io/img/ojos/masculino/B1_M2405.png",    //32
+        "https://Karlxz.github.io/img/ojos/masculino/A7_M1000.png",    //33
+        "https://Karlxz.github.io/img/ojos/masculino/A6_M0287.png",    //34
+        "https://Karlxz.github.io/img/ojos/masculino/A5_M1048.png",    //35
+        "https://Karlxz.github.io/img/ojos/masculino/A4_M0967.png",    //36
+        "https://Karlxz.github.io/img/ojos/masculino/A3_M0311.png",    //37
+        "https://Karlxz.github.io/img/ojos/masculino/A2_M0233.png",    //38
+        "https://Karlxz.github.io/img/ojos/masculino/A1_M0571.png",    //39
+
+        //Ojos femeninos
+        "https://Karlxz.github.io/img/ojos/masculino/F4_F0160.png",    //1
+        "https://Karlxz.github.io/img/ojos/masculino/F3_F1298.png",    //2
+        "https://Karlxz.github.io/img/ojos/masculino/F2_F0521.png",    //3
+        "https://Karlxz.github.io/img/ojos/masculino/F1_F0698.png",    //4
+        "https://Karlxz.github.io/img/ojos/masculino/E6_F0188.png",    //5
+        "https://Karlxz.github.io/img/ojos/masculino/E5_F2553.png",    //6
+        "https://Karlxz.github.io/img/ojos/masculino/E4_F0661.png",    //7
+        "https://Karlxz.github.io/img/ojos/masculino/E3_F2550.png",    //8
+        "https://Karlxz.github.io/img/ojos/masculino/E2_F2852.png",    //9
+        "https://Karlxz.github.io/img/ojos/masculino/E1_F1703.png",    //10
+        "https://Karlxz.github.io/img/ojos/masculino/D7_F2706.png",    //11
+        "https://Karlxz.github.io/img/ojos/masculino/D6_F2873.png",    //12
+        "https://Karlxz.github.io/img/ojos/masculino/D5_F1370.png",    //13
+        "https://Karlxz.github.io/img/ojos/masculino/D4_F1362.png",    //14
+        "https://Karlxz.github.io/img/ojos/masculino/D3_F0168.png",    //15
+        "https://Karlxz.github.io/img/ojos/masculino/D2_F2882.png",    //16
+        "https://Karlxz.github.io/img/ojos/masculino/D1_F0301.png",    //17
+        "https://Karlxz.github.io/img/ojos/masculino/C6_F1932.png",    //18
+        "https://Karlxz.github.io/img/ojos/masculino/C5_F0179.png",    //19
+        "https://Karlxz.github.io/img/ojos/masculino/C4_F1223.png",    //20
+        "https://Karlxz.github.io/img/ojos/masculino/C3_F1221.png",    //21
+        "https://Karlxz.github.io/img/ojos/masculino/C2_F2442.png",    //22
+        "https://Karlxz.github.io/img/ojos/masculino/C1_F2407.png",    //23
+        "https://Karlxz.github.io/img/ojos/masculino/B5_F1308.png",    //24
+        "https://Karlxz.github.io/img/ojos/masculino/B4_F1606.png",    //25
+        "https://Karlxz.github.io/img/ojos/masculino/B3_F0710.png",    //26
+        "https://Karlxz.github.io/img/ojos/masculino/B2_F2472.png",    //27
+        "https://Karlxz.github.io/img/ojos/masculino/B1_F1037.png",    //28
+        "https://Karlxz.github.io/img/ojos/masculino/A7_F1614.png",    //29
+        "https://Karlxz.github.io/img/ojos/masculino/A6_F1603.png",    //30
+        "https://Karlxz.github.io/img/ojos/masculino/A5_F1334.png",    //31
+        "https://Karlxz.github.io/img/ojos/masculino/A4_F1300.png",    //32
+        "https://Karlxz.github.io/img/ojos/masculino/A3_F1040.png",    //33
+        "https://Karlxz.github.io/img/ojos/masculino/A2_F1612.png",    //34
+        "https://Karlxz.github.io/img/ojos/masculino/A1_F2356.png",    //35
     ];
 
     return carasMascRef[imagen];

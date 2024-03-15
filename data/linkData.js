@@ -36,7 +36,7 @@ function linkData(){
     }
 
     if(imgOjos.length != 0){
-        for (let i = 0; i < 1; i++){
+        for (let i = 0; i < 74; i++){
             imgOjos[i].src = openData(i+54);
         }
     }
