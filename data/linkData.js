@@ -42,19 +42,19 @@ function linkData(){
 
     if(imgCejas.length != 0){
         for (let i = 0; i < 30; i++){
-            imgOjos[i].src = openData(i+128);
+            imgCejas[i].src = openData(i+128);
         }
     }
 
-    if(imgCejas.length != 0){
+    if(imgNarices.length != 0){
         for (let i = 0; i < 24; i++){
-            imgOjos[i].src = openData(i+158);
+            imgNarices[i].src = openData(i+158);
         }
     }
 
-    if(imgCejas.length != 0){
+    if(imgLabios.length != 0){
         for (let i = 0; i < 30; i++){
-            imgOjos[i].src = openData(i+182);
+            imgLabios[i].src = openData(i+182);
         }
     }
 
