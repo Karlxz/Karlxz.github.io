@@ -1,5 +1,8 @@
 let imgCaras = document.querySelectorAll("#caras");
 let imgOjos = document.querySelectorAll("#ojos");
+let imgCejas = document.querySelectorAll("#cejas");
+let imgNarices = document.querySelectorAll("#narices");
+let imgLabios = document.querySelectorAll("#labios");
 let divMasc = document.querySelector(".masc");
 let divFem = document.querySelector(".fem");
 // let btnCaras = document.querySelector("#caras");
@@ -26,11 +29,7 @@ function linkData(){
     divFem.style.display = 'none';
     
     if(imgCaras.length!=0){
-        for (let i = 0; i < 29; i++){
-            imgCaras[i].src = openData(i);
-        }
-    
-        for (let i = 29; i < 54; i++){
+        for (let i = 0; i < 54; i++){
             imgCaras[i].src = openData(i);
         }
     }
@@ -38,6 +37,24 @@ function linkData(){
     if(imgOjos.length != 0){
         for (let i = 0; i < 74; i++){
             imgOjos[i].src = openData(i+54);
+        }
+    }
+
+    if(imgCejas.length != 0){
+        for (let i = 0; i < 30; i++){
+            imgOjos[i].src = openData(i+128);
+        }
+    }
+
+    if(imgCejas.length != 0){
+        for (let i = 0; i < 24; i++){
+            imgOjos[i].src = openData(i+158);
+        }
+    }
+
+    if(imgCejas.length != 0){
+        for (let i = 0; i < 30; i++){
+            imgOjos[i].src = openData(i+182);
         }
     }
 
