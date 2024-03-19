@@ -232,6 +232,52 @@ function openData(imagen){
         "https://Karlxz.github.io/img/labios/femenino/A3_F0783.png",    //13
         "https://Karlxz.github.io/img/labios/femenino/A2_F0038.png",    //14
         "https://Karlxz.github.io/img/labios/femenino/A1_F1347.png",    //15
+
+        //Orejas masculinas
+        "https://Karlxz.github.io/img/orejas/masculino/C3_M1439.png",    //1
+        "https://Karlxz.github.io/img/orejas/masculino/C2_M1397.png",    //2
+        "https://Karlxz.github.io/img/orejas/masculino/C1_M1383.png",    //3
+        "https://Karlxz.github.io/img/orejas/masculino/B3_M0027.png",    //4
+        "https://Karlxz.github.io/img/orejas/masculino/B2_M1390.png",    //5
+        "https://Karlxz.github.io/img/orejas/masculino/B1_M1434.png",    //6
+        "https://Karlxz.github.io/img/orejas/masculino/A3_M0018.png",    //7
+        "https://Karlxz.github.io/img/orejas/masculino/A2_M1104.png",    //8
+        "https://Karlxz.github.io/img/orejas/masculino/A1_M0635.png",    //9
+
+        //Orejas femeninas
+        "https://Karlxz.github.io/img/orejas/femenino/C3_F1289.png",    //1
+        "https://Karlxz.github.io/img/orejas/femenino/C2_F0112.png",    //2
+        "https://Karlxz.github.io/img/orejas/femenino/C1_F1213.png",    //3
+        "https://Karlxz.github.io/img/orejas/femenino/B3_F1314.png",    //4
+        "https://Karlxz.github.io/img/orejas/femenino/B2_F1207.png",    //5
+        "https://Karlxz.github.io/img/orejas/femenino/B1_F0195.png",    //6
+        "https://Karlxz.github.io/img/orejas/femenino/A3_F1209.png",    //7
+        "https://Karlxz.github.io/img/orejas/femenino/A2_F1216.png",    //8
+        "https://Karlxz.github.io/img/orejas/femenino/A1_F0163.png",    //9
+
+        //Papadas masculinas
+        "https://Karlxz.github.io/img/papadas/masculino/C3_M1034.png",    //1
+        "https://Karlxz.github.io/img/papadas/masculino/C2_M0018.png",    //2
+        "https://Karlxz.github.io/img/papadas/masculino/C1_M0985.png",    //3
+        "https://Karlxz.github.io/img/papadas/masculino/B3_M0677.png",    //4
+        "https://Karlxz.github.io/img/papadas/masculino/B2_M1022.png",    //5
+        "https://Karlxz.github.io/img/papadas/masculino/B1_M0655.png",    //6
+        "https://Karlxz.github.io/img/papadas/masculino/A3_M0125.png",    //7
+        "https://Karlxz.github.io/img/papadas/masculino/A2_M0134.png",    //8
+        "https://Karlxz.github.io/img/papadas/masculino/A1_M0008.png",    //9
+
+        //papadas femeninas
+        "https://Karlxz.github.io/img/papadas/femenino/C3_F0085.png",    //1
+        "https://Karlxz.github.io/img/papadas/femenino/C2_F0124.png",    //2
+        "https://Karlxz.github.io/img/papadas/femenino/C1_F0106.png",    //3
+        "https://Karlxz.github.io/img/papadas/femenino/B3_F0151.png",    //4
+        "https://Karlxz.github.io/img/papadas/femenino/B2_F0094.png",    //5
+        "https://Karlxz.github.io/img/papadas/femenino/B1_F0111.png",    //6
+        "https://Karlxz.github.io/img/papadas/femenino/A3_F2431.png",    //7
+        "https://Karlxz.github.io/img/papadas/femenino/A2_F2485.png",    //8
+        "https://Karlxz.github.io/img/papadas/femenino/A1_F2447.png",    //9
+
+        
     ];
 
     return carasMascRef[imagen];
