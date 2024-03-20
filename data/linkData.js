@@ -3,6 +3,12 @@ let imgOjos = document.querySelectorAll("#ojos");
 let imgCejas = document.querySelectorAll("#cejas");
 let imgNarices = document.querySelectorAll("#narices");
 let imgLabios = document.querySelectorAll("#labios");
+let imgOrejas = document.querySelectorAll("#orejas");
+let imgPapadas = document.querySelectorAll("#papadas");
+let imgCachetes = document.querySelectorAll("#cachetes");
+let imgArrugasEntrecejo = document.querySelectorAll("#arrugasEntrecejo");
+let imgArrugasPerioculares = document.querySelectorAll("#arrugasPerioculares");
+let imgArrugasNasogenianas = document.querySelectorAll("#arrugasNasogenianas");
 let divMasc = document.querySelector(".masc");
 let divFem = document.querySelector(".fem");
 // let btnCaras = document.querySelector("#caras");
@@ -58,6 +64,42 @@ function linkData(){
         }
     }
 
+    if(imgOrejas.length != 0){
+        for (let i = 0; i < 18; i++){
+            imgOrejas[i].src = openData(i+212);
+        }
+    }
+
+    if(imgPapadas.length != 0){
+        for (let i = 0; i < 18; i++){
+            imgPapadas[i].src = openData(i+230);
+        }
+    }
+
+    if(imgCachetes.length != 0){
+        for (let i = 0; i < 12; i++){
+            imgCachetes[i].src = openData(i+248);
+        }
+    }
+
+    if(imgArrugasEntrecejo.length != 0){
+        for (let i = 0; i < 18; i++){
+            imgArrugasEntrecejo[i].src = openData(i+260);
+        }
+    }
+
+    if(imgArrugasPerioculares.length != 0){
+        for (let i = 0; i < 18; i++){
+            imgArrugasPerioculares[i].src = openData(i+278);
+        }
+    }
+
+    if(imgArrugasNasogenianas.length != 0){
+        for (let i = 0; i < 18; i++){
+            imgArrugasNasogenianas[i].src = openData(i+296);
+        }
+    }
+    
     return new Promise(function(resolve, reject) {
         resolve();
     });
