@@ -247,7 +247,7 @@ async function setup() {
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Asimetrias").remove();`);
 
                 await addImageAndWait(window.parent, openData(i+368)); //24
-                //await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,64)");
+                await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,0)")
                 await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Asimetrias";`);
             })
         }
