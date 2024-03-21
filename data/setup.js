@@ -39,8 +39,34 @@ async function setup() {
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Ojos").remove();`);
 
                 await addImageAndWait(window.parent, openData(i+54)); //24
-                await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,-24)")
+                await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,-34)")
                 await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Ojos";`);
+            })
+        }
+    }
+
+    for(let i = 0; i < 30 ; i++){
+        if(imgCejas[i]){
+            await imgCejas[i].addEventListener("click", async ()=>{
+                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cejas");`))
+                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cejas").remove();`);
+
+                await addImageAndWait(window.parent, openData(i+128)); //24
+                await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,-55)")
+                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cejas";`);
+            })
+        }
+    }
+
+    for(let i = 0; i < 24 ; i++){
+        if(imgNarices[i]){
+            await imgNarices[i].addEventListener("click", async ()=>{
+                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Nariz");`))
+                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Nariz").remove();`);
+
+                await addImageAndWait(window.parent, openData(i+158)); //24
+                await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,0)")
+                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Nariz";`);
             })
         }
     }
