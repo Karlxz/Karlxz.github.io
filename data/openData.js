@@ -360,90 +360,90 @@ function openData(imagen){
         "https://Karlxz.github.io/img/piel/4-arrugasNasogenianas/femenino/A1_F2441.png",    //9
 
         //Arrugas peribucales masculinas
-        "https://Karlxz.github.io/img/ojos/masculino/C3_M1078.png",    //1          314
-        "https://Karlxz.github.io/img/ojos/masculino/C2_M1369.png",    //2
-        "https://Karlxz.github.io/img/ojos/masculino/C1_M0132.png",    //3
-        "https://Karlxz.github.io/img/ojos/masculino/B3_M0013.png",    //4
-        "https://Karlxz.github.io/img/ojos/masculino/B2_M0233.png",    //5
-        "https://Karlxz.github.io/img/ojos/masculino/B1_M0041.png",    //6
-        "https://Karlxz.github.io/img/ojos/masculino/A3_M2420.png",    //7
-        "https://Karlxz.github.io/img/ojos/masculino/A2_M0311.png",    //8
-        "https://Karlxz.github.io/img/ojos/masculino/A1_M2594.png",    //9
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/masculino/C3_M1078.png",    //1          314
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/masculino/C2_M1369.png",    //2
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/masculino/C1_M0132.png",    //3
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/masculino/B3_M0013.png",    //4
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/masculino/B2_M0233.png",    //5
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/masculino/B1_M0041.png",    //6
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/masculino/A3_M2420.png",    //7
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/masculino/A2_M0311.png",    //8
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/masculino/A1_M2594.png",    //9
 
         //Arrugas peribucales femeninas
-        "https://Karlxz.github.io/img/papadas/femenino/C3_F0931.png",    //1
-        "https://Karlxz.github.io/img/papadas/femenino/C2_F2423.png",    //2
-        "https://Karlxz.github.io/img/papadas/femenino/C1_F0061.png",    //3
-        "https://Karlxz.github.io/img/papadas/femenino/B3_F2450.png",    //4
-        "https://Karlxz.github.io/img/papadas/femenino/B2_F2573.png",    //5
-        "https://Karlxz.github.io/img/papadas/femenino/B1_F0019.png",    //6
-        "https://Karlxz.github.io/img/papadas/femenino/A3_F2437.png",    //7
-        "https://Karlxz.github.io/img/papadas/femenino/A2_F0034.png",    //8
-        "https://Karlxz.github.io/img/papadas/femenino/A1_F2441.png",    //9
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/femenino/C3_F0931.png",    //1
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/femenino/C2_F2423.png",    //2
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/femenino/C1_F0061.png",    //3
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/femenino/B3_F2450.png",    //4
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/femenino/B2_F2573.png",    //5
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/femenino/B1_F0019.png",    //6
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/femenino/A3_F2437.png",    //7
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/femenino/A2_F0034.png",    //8
+        "https://Karlxz.github.io/img/piel/5-arrugasPeribucales/femenino/A1_F2441.png",    //9
 
         //Acne masculino
-        "https://Karlxz.github.io/img/ojos/masculino/M2090.png",    //1             332
-        "https://Karlxz.github.io/img/ojos/masculino/M1482.png",    //2
-        "https://Karlxz.github.io/img/ojos/masculino/M0741.png",    //3
-        "https://Karlxz.github.io/img/ojos/masculino/M0582.png",    //4
+        "https://Karlxz.github.io/img/piel/acne/masculino/M2090.png",    //1             332
+        "https://Karlxz.github.io/img/piel/acne/masculino/M1482.png",    //2
+        "https://Karlxz.github.io/img/piel/acne/masculino/M0741.png",    //3
+        "https://Karlxz.github.io/img/piel/acne/masculino/M0582.png",    //4
 
         //Acen femenino
-        "https://Karlxz.github.io/img/papadas/femenino/F1354.png",    //1
-        "https://Karlxz.github.io/img/papadas/femenino/F1133.png",    //2
-        "https://Karlxz.github.io/img/papadas/femenino/F0721.png",    //3
-        "https://Karlxz.github.io/img/papadas/femenino/F0166.png",    //4
+        "https://Karlxz.github.io/img/piel/acne/femenino/F1354.png",    //1
+        "https://Karlxz.github.io/img/piel/acne/femenino/F1133.png",    //2
+        "https://Karlxz.github.io/img/piel/acne/femenino/F0721.png",    //3
+        "https://Karlxz.github.io/img/piel/acne/femenino/F0166.png",    //4
 
         //Cicatriz
-        "https://Karlxz.github.io/img/ojos/masculino/D_M1184.png",    //1           340
-        "https://Karlxz.github.io/img/ojos/masculino/C_M1015.png",    //2
-        "https://Karlxz.github.io/img/ojos/masculino/B_M1184.png",    //3
-        "https://Karlxz.github.io/img/ojos/masculino/A_M1423.png",    //4
+        "https://Karlxz.github.io/img/piel/cicatrices/D_M1184.png",    //1           340
+        "https://Karlxz.github.io/img/piel/cicatrices/C_M1015.png",    //2
+        "https://Karlxz.github.io/img/piel/cicatrices/B_M1184.png",    //3
+        "https://Karlxz.github.io/img/piel/cicatrices/A_M1423.png",    //4
 
         //Pecas
-        "https://Karlxz.github.io/img/ojos/masculino/F1176.png",    //1             344
-        "https://Karlxz.github.io/img/ojos/masculino/F0366.png",    //2
+        "https://Karlxz.github.io/img/piel/pecas/F1176.png",    //1             344
+        "https://Karlxz.github.io/img/piel/pecas/F0366.png",    //2
 
         //Verrugas y lunares
-        "https://Karlxz.github.io/img/ojos/masculino/J_M0158.png",    //1           346
-        "https://Karlxz.github.io/img/ojos/masculino/I_M0223.png",    //2
-        "https://Karlxz.github.io/img/ojos/masculino/H_M0032.png",    //3
-        "https://Karlxz.github.io/img/ojos/masculino/G_F0042.png",    //4
-        "https://Karlxz.github.io/img/ojos/masculino/F_F1131.png",    //5
-        "https://Karlxz.github.io/img/ojos/masculino/E_F1108.png",    //6
-        "https://Karlxz.github.io/img/ojos/masculino/D_M0313.png",    //7
-        "https://Karlxz.github.io/img/ojos/masculino/C_F0156.png",    //8
-        "https://Karlxz.github.io/img/ojos/masculino/B_F0907.png",    //9
-        "https://Karlxz.github.io/img/ojos/masculino/A_M0041.png",    //10
+        "https://Karlxz.github.io/img/piel/verrugasyLunares/J_M0158.png",    //1           346
+        "https://Karlxz.github.io/img/piel/verrugasyLunares/I_M0223.png",    //2
+        "https://Karlxz.github.io/img/piel/verrugasyLunares/H_M0032.png",    //3
+        "https://Karlxz.github.io/img/piel/verrugasyLunares/G_F0042.png",    //4
+        "https://Karlxz.github.io/img/piel/verrugasyLunares/F_F1131.png",    //5
+        "https://Karlxz.github.io/img/piel/verrugasyLunares/E_F1108.png",    //6
+        "https://Karlxz.github.io/img/piel/verrugasyLunares/D_M0313.png",    //7
+        "https://Karlxz.github.io/img/piel/verrugasyLunares/C_F0156.png",    //8
+        "https://Karlxz.github.io/img/piel/verrugasyLunares/B_F0907.png",    //9
+        "https://Karlxz.github.io/img/piel/verrugasyLunares/A_M0041.png",    //10
 
         //Hoyo menton masculino
-        "https://Karlxz.github.io/img/ojos/masculino/F_M1434.png",    //1           356
-        "https://Karlxz.github.io/img/ojos/masculino/E_M0178.png",    //2
-        "https://Karlxz.github.io/img/ojos/masculino/D_M0114.png",    //3
-        "https://Karlxz.github.io/img/ojos/masculino/C_M1337.png",    //4
-        "https://Karlxz.github.io/img/ojos/masculino/B_M0305.png",    //5
-        "https://Karlxz.github.io/img/ojos/masculino/A_M1389.png",    //6
+        "https://Karlxz.github.io/img/hoyoMenton/masculino/F_M1434.png",    //1           356
+        "https://Karlxz.github.io/img/hoyoMenton/masculino/E_M0178.png",    //2
+        "https://Karlxz.github.io/img/hoyoMenton/masculino/D_M0114.png",    //3
+        "https://Karlxz.github.io/img/hoyoMenton/masculino/C_M1337.png",    //4
+        "https://Karlxz.github.io/img/hoyoMenton/masculino/B_M0305.png",    //5
+        "https://Karlxz.github.io/img/hoyoMenton/masculino/A_M1389.png",    //6
 
         //Hoyo menton femenino
-        "https://Karlxz.github.io/img/papadas/femenino/F_F1349.png",    //1
-        "https://Karlxz.github.io/img/papadas/femenino/E_F0035.png",    //2
-        "https://Karlxz.github.io/img/papadas/femenino/D_F1379.png",    //3
-        "https://Karlxz.github.io/img/papadas/femenino/C_F0168.png",    //4
-        "https://Karlxz.github.io/img/papadas/femenino/B_F0671.png",    //5
-        "https://Karlxz.github.io/img/papadas/femenino/A_F1376.png",    //6
+        "https://Karlxz.github.io/img/hoyoMenton/femenino/F_F1349.png",    //1
+        "https://Karlxz.github.io/img/hoyoMenton/femenino/E_F0035.png",    //2
+        "https://Karlxz.github.io/img/hoyoMenton/femenino/D_F1379.png",    //3
+        "https://Karlxz.github.io/img/hoyoMenton/femenino/C_F0168.png",    //4
+        "https://Karlxz.github.io/img/hoyoMenton/femenino/B_F0671.png",    //5
+        "https://Karlxz.github.io/img/hoyoMenton/femenino/A_F1376.png",    //6
 
         //Asimetrias
-        "https://Karlxz.github.io/img/papadas/femenino/M0364.png",    //1           368
-        "https://Karlxz.github.io/img/papadas/femenino/M0312.png",    //2
-        "https://Karlxz.github.io/img/papadas/femenino/F0727.png",    //3
-        "https://Karlxz.github.io/img/papadas/femenino/F0674.png",    //4
-        "https://Karlxz.github.io/img/papadas/femenino/F0355.png",    //5
-        "https://Karlxz.github.io/img/papadas/femenino/F0072.png",    //6
-        "https://Karlxz.github.io/img/papadas/femenino/F0059.png",    //7
+        "https://Karlxz.github.io/img/asimetrias/M0364.png",    //1           368
+        "https://Karlxz.github.io/img/asimetrias/M0312.png",    //2
+        "https://Karlxz.github.io/img/asimetrias/F0727.png",    //3
+        "https://Karlxz.github.io/img/asimetrias/F0674.png",    //4
+        "https://Karlxz.github.io/img/asimetrias/F0355.png",    //5
+        "https://Karlxz.github.io/img/asimetrias/F0072.png",    //6
+        "https://Karlxz.github.io/img/asimetrias/F0059.png",    //7
 
         //Torus
-        "https://Karlxz.github.io/img/papadas/femenino/C_M0130.png",    //1         375
-        "https://Karlxz.github.io/img/papadas/femenino/B_M0360.png",    //2
-        "https://Karlxz.github.io/img/papadas/femenino/A_M0324.png",    //3
+        "https://Karlxz.github.io/img/torus/C_M0130.png",    //1         375
+        "https://Karlxz.github.io/img/torus/B_M0360.png",    //2
+        "https://Karlxz.github.io/img/torus/A_M0324.png",    //3
 
         //Cabelleras masculinas
         "https://Karlxz.github.io/img/cabelleras/masculino/C11_M0041.png",    //1   378

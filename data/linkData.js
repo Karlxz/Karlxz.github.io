@@ -9,6 +9,20 @@ let imgCachetes = document.querySelectorAll("#cachetes");
 let imgArrugasEntrecejo = document.querySelectorAll("#arrugasEntrecejo");
 let imgArrugasPerioculares = document.querySelectorAll("#arrugasPerioculares");
 let imgArrugasNasogenianas = document.querySelectorAll("#arrugasNasogenianas");
+let imgArrugasPeribucales = document.querySelectorAll("#arrugasPeribucales");
+let imgAcne = document.querySelectorAll("#acne");
+let imgCicatrices = document.querySelectorAll("#cicatrices");
+let imgPecas = document.querySelectorAll("#pecas");
+let imgVerrugasyLunares = document.querySelectorAll("#verrugasyLunares");
+let imgHoyoMenton = document.querySelectorAll("#hoyoMenton");
+let imgAsimetrias = document.querySelectorAll("#asimetrias");
+let imgTorus = document.querySelectorAll("#torus");
+let imgCabelleras = document.querySelectorAll("#cabelleras");
+let imgBigotes = document.querySelectorAll("#bigotes");
+let imgBarbas = document.querySelectorAll("#barbas");
+let imgAretes = document.querySelectorAll("#aretes");
+let imgLentes = document.querySelectorAll("#lentes");
+let imgSombreros = document.querySelectorAll("#sombreros");
 let divMasc = document.querySelector(".masc");
 let divFem = document.querySelector(".fem");
 // let btnCaras = document.querySelector("#caras");
@@ -29,10 +43,10 @@ let divFem = document.querySelector(".fem");
 
 function linkData(){
 
-    console.log(imgCaras);
-    console.log(imgOjos);
-    divMasc.style.display = 'block';
-    divFem.style.display = 'none';
+    if(divMasc && divFem){
+        divMasc.style.display = 'block';
+        divFem.style.display = 'none';
+    }
     
     if(imgCaras.length!=0){
         for (let i = 0; i < 54; i++){
@@ -97,6 +111,90 @@ function linkData(){
     if(imgArrugasNasogenianas.length != 0){
         for (let i = 0; i < 18; i++){
             imgArrugasNasogenianas[i].src = openData(i+296);
+        }
+    }
+
+    if(imgArrugasPeribucales.length != 0){
+        for (let i = 0; i < 18; i++){
+            imgArrugasPeribucales[i].src = openData(i+314);
+        }
+    }
+
+    if(imgAcne.length != 0){
+        for (let i = 0; i < 8; i++){
+            imgAcne[i].src = openData(i+332);
+        }
+    }
+
+    if(imgCicatrices.length != 0){
+        for (let i = 0; i < 4; i++){
+            imgCicatrices[i].src = openData(i+340);
+        }
+    }
+
+    if(imgPecas.length != 0){
+        for (let i = 0; i < 2; i++){
+            imgPecas[i].src = openData(i+344);
+        }
+    }
+
+    if(imgVerrugasyLunares.length != 0){
+        for (let i = 0; i < 10; i++){
+            imgVerrugasyLunares[i].src = openData(i+346);
+        }
+    }
+
+    if(imgHoyoMenton.length != 0){
+        for (let i = 0; i < 12; i++){
+            imgHoyoMenton[i].src = openData(i+356);
+        }
+    }
+
+    if(imgAsimetrias.length != 0){
+        for (let i = 0; i < 7; i++){
+            imgAsimetrias[i].src = openData(i+368);
+        }
+    }
+
+    if(imgTorus.length != 0){
+        for (let i = 0; i < 3; i++){
+            imgTorus[i].src = openData(i+375);
+        }
+    }
+
+    if(imgCabelleras.length != 0){
+        for (let i = 0; i < 126; i++){
+            imgCabelleras[i].src = openData(i+378);
+        }
+    }
+
+    if(imgBigotes.length != 0){
+        for (let i = 0; i < 17; i++){
+            imgBigotes[i].src = openData(i+504);
+        }
+    }
+
+    if(imgBarbas.length != 0){
+        for (let i = 0; i < 10; i++){
+            imgBarbas[i].src = openData(i+521);
+        }
+    }
+
+    if(imgAretes.length != 0){
+        for (let i = 0; i < 12; i++){
+            imgAretes[i].src = openData(i+531);
+        }
+    }
+
+    if(imgLentes.length != 0){
+        for (let i = 0; i < 19; i++){
+            imgLentes[i].src = openData(i+543);
+        }
+    }
+
+    if(imgSombreros.length != 0){
+        for (let i = 0; i < 18; i++){
+            imgSombreros[i].src = openData(i+562);
         }
     }
     
