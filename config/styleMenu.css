@@ -1,0 +1,50 @@
+.menu {
+    /* background-color: chartreuse; */
+    float: left;
+    height: 100%;
+    width: 10%;
+    text-align: start;
+  }
+
+  .btnOption{
+    display: inline-block;
+    padding: 30px 30px;
+    cursor: pointer;
+    text-align: bottom;
+    color: #fff;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 2px #000000;
+    margin: 40px auto;
+  }
+
+  .btnOption:hover {background-color: #dbe3e49f}
+
+  .btnOption:active {
+    background-color: #b9bec09f;
+    transform: translateY(4px);
+  }
+
+  #translate{
+    background-image: url('https://Karlxz.github.io/img/translate.png');
+    background-size: 60px 60px;
+    background-position: center;
+  }
+
+  #resize{
+    background-image: url('https://Karlxz.github.io/img/resize.png');
+    background-size: 70px 70px;
+    background-position: center;
+  }
+
+  #rotate{
+    background-image: url('https://Karlxz.github.io/img/rotate.png');
+    background-size: 60px 60px;
+    background-position: center;
+  }
+
+  #extra{
+    background-image: url('https://Karlxz.github.io/img/extra.png');
+    background-size: 60px 60px;
+    background-position: center;
+  }

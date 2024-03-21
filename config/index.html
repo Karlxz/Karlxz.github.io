@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="styleMenu.css">
     </head>
     <body>
-        <a href="translate.html"><button style="padding: 16px;" id="translate" >Translate</button></a>
+        <!-- <a href="translate.html"><button style="padding: 16px;" id="translate" >Translate</button></a>
         <a href="resize.html"><button style="padding: 16px;" id="resize"">resize</button></a><br>
         <button style="padding: 16px;" id="rotate">rotate</button>
-        <button style="padding: 16px;" id="extra">extra</button>
+        <button style="padding: 16px;" id="extra">extra</button> -->
+
+        <div class="menu">
+            <button id="translate" class="btnOption"></button><br>
+            <button id="resize" class="btnOption"></button><br>
+            <button id="rotate" class="btnOption"></button><br>
+            <button id="extra" class="btnOption"></button><br>
+        </div>
+
+        <div class="translate">
+            <button id="up" class="actionbtn">Up</button>
+            <button id="right" class="actionbtn">Lt</button>
+            <button id="left" class="actionbtn">Rt</button>
+            <button id="down" class="actionbtn">Dw</button>
+        </div>
+
+        <div class="resize">
+            <button id="up" class="actionbtn">U2p</button>
+            <button id="right" class="actionbtn">Lt2</button>
+            <button id="left" class="actionbtn">Rt2</button>
+            <button id="down" class="actionbtn">Dw2</button>
+        </div>
 
         
             <script src="/lib/photopea.js"></script>
             <script src="/lib/addImageAndWait.js"></script>
             <script src="/config/movement.js"></script>
-            <script src="/config/setup.js"></script>
+            <!-- <script src="/config/setup.js"></script>
             <script src="/config/openData.js"></script>
-            <script src="/config/code.js"></script>
+            <script src="/config/code.js"></script> -->
     </body>
 </html>

@@ -1,4 +1,4 @@
 
-setup().then(function(){
-    movement();
-})
+// setup().then(function(){
+//     movement();
+// })
