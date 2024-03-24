@@ -9,7 +9,25 @@ async function movement(){
     let btnHorResMax = document.querySelector("#horResMax");
     let btnFullResMin = document.querySelector("#fullResMin");
     let btnFullResMax = document.querySelector("#fullResMax");
+    let btnTranslate = document.querySelector("#translate"); 
+    let btnResize = document.querySelector("#resize"); 
+    let btnRotate = document.querySelector("#rotate"); 
+    let btnExtra = document.querySelector("#extra"); 
+    
+    if(btnTranslate){
+        await btnTranslate.addEventListener("click", ()=>{
+            divTranslate.style.display = "block";
+            divResize.style.display = "none";
+        })
+        
+    }
 
+    if(btnResize){
+        await btnResize.addEventListener("click", ()=>{
+            divResize.style.display = "block";
+            divTranslate.style.display = "none";
+        })
+    }
 
     if(btnUp){
         await btnUp.addEventListener("click", ()=>{

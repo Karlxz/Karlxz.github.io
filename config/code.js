@@ -1,4 +1,3 @@
-
-// setup().then(function(){
-//     movement();
-// })
+setUpMenu().then(function(){
+    movement();
+})
