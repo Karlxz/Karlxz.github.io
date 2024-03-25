@@ -1,8 +1,8 @@
 .menu {
-    /* background-color: chartreuse; */
+    background-color: chartreuse;
     float: left;
     height: 100%;
-    width: 9.8%;
+    width: calc(10%-1px);
     text-align:center;
     border-right: solid;
     border-width: 3px;
@@ -10,7 +10,7 @@
   }
 
   .translate{
-    /* background-color: aquamarine; */
+    background-color: aquamarine;
     float: right;
     height: 100%;
     width: 90%;
@@ -19,7 +19,7 @@
 
   .btnOption{
     display: inline-block;
-    padding: 30px 30px;
+    padding: 10px 10px;
     cursor: pointer;
     text-align: bottom;
     color: #fff;
@@ -41,7 +41,7 @@
     padding: 30px 30px;
     cursor: pointer;
     text-align: center;
-    color: #000000;
+    color: #ffffff;
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 2px #000000;
@@ -50,31 +50,31 @@
 
   #up{
     background-image: url('https://Karlxz.github.io/img/arrow.png');
-    background-size: 60px 60px;
+    background-size: cover;
     background-position: center;
   }
 
   #translate{
     background-image: url('https://Karlxz.github.io/img/translate.png');
-    background-size: 60px 60px;
+    background-size: cover;
     background-position: center;
   }
 
   #resize{
     background-image: url('https://Karlxz.github.io/img/resize.png');
-    background-size: 70px 70px;
+    background-size: cover;
     background-position: center;
   }
 
   #rotate{
     background-image: url('https://Karlxz.github.io/img/rotate.png');
-    background-size: 60px 60px;
+    background-size: cover;
     background-position: center;
   }
 
   #extra{
     background-image: url('https://Karlxz.github.io/img/extra.png');
-    background-size: 60px 60px;
+    background-size: cover;
     background-position: center;
   }
 
