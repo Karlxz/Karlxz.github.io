@@ -93,7 +93,7 @@
     transform: rotate(0deg);
     background-size: cover;
     background-position: center;
-    margin-left: 50px;
+    margin-left: 40px;
   }
 
   #left{
@@ -101,7 +101,7 @@
     transform: rotate(180deg);
     background-size: cover;
     background-position: center;
-    margin-right: 50px;
+    margin-right: 40px;
   }
 
   #down{
