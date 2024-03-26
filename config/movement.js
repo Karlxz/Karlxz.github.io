@@ -3,29 +3,31 @@ async function movement(){
     let btnDown = document.querySelector("#down");
     let btnLeft = document.querySelector("#left");
     let btnRight = document.querySelector("#right");
-    let btnverResMin = document.querySelector("#verResMin");
-    let btnverResMax = document.querySelector("#verResMax");
-    let btnHorResMin = document.querySelector("#horResMin");
-    let btnHorResMax = document.querySelector("#horResMax");
-    let btnFullResMin = document.querySelector("#fullResMin");
-    let btnFullResMax = document.querySelector("#fullResMax");
+    // let btnverResMin = document.querySelector("#verResMin");
+    // let btnverResMax = document.querySelector("#verResMax");
+    // let btnHorResMin = document.querySelector("#horResMin");
+    // let btnHorResMax = document.querySelector("#horResMax");
+    // let btnFullResMin = document.querySelector("#fullResMin");
+    // let btnFullResMax = document.querySelector("#fullResMax");
     let btnTranslate = document.querySelector("#translate"); 
     let btnResize = document.querySelector("#resize"); 
-    let btnRotate = document.querySelector("#rotate"); 
-    let btnExtra = document.querySelector("#extra"); 
+    // let btnRotate = document.querySelector("#rotate"); 
+    // let btnExtra = document.querySelector("#extra"); 
     
     if(btnTranslate){
         await btnTranslate.addEventListener("click", ()=>{
-            divTranslate.style.display = "block";
+            divNothing.style.display = "none";
             divResize.style.display = "none";
+            divTranslate.style.display = "block";
         })
         
     }
 
     if(btnResize){
         await btnResize.addEventListener("click", ()=>{
-            divResize.style.display = "block";
+            divNothing.style.display = "none";
             divTranslate.style.display = "none";
+            divResize.style.display = "block";
         })
     }
 
@@ -54,42 +56,42 @@ async function movement(){
         })
     }
 
-    if(btnverResMin){
-        await btnverResMin.addEventListener("click", ()=>{
-            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(100,99)");
-            //console.log("Tambien funciona");
-        })
-    }
+    // if(btnverResMin){
+    //     await btnverResMin.addEventListener("click", ()=>{
+    //         Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(100,99)");
+    //         //console.log("Tambien funciona");
+    //     })
+    // }
 
-    if(btnverResMax){
-        await btnverResMax.addEventListener("click", ()=>{
-            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(100,101)");
-        })
-    }
+    // if(btnverResMax){
+    //     await btnverResMax.addEventListener("click", ()=>{
+    //         Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(100,101)");
+    //     })
+    // }
 
-    if(btnHorResMin){
-        await btnHorResMin.addEventListener("click", ()=>{
-            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(99,100)");
-        })    
-    }
+    // if(btnHorResMin){
+    //     await btnHorResMin.addEventListener("click", ()=>{
+    //         Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(99,100)");
+    //     })    
+    // }
 
-    if(btnHorResMax){
-        await btnHorResMax.addEventListener("click", ()=>{
-            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(101,100)");
-        })
-    }
+    // if(btnHorResMax){
+    //     await btnHorResMax.addEventListener("click", ()=>{
+    //         Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(101,100)");
+    //     })
+    // }
 
-    if(btnFullResMin){
-        await btnFullResMin.addEventListener("click", ()=>{
-            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(99,99)");
-        })
-    }
+    // if(btnFullResMin){
+    //     await btnFullResMin.addEventListener("click", ()=>{
+    //         Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(99,99)");
+    //     })
+    // }
 
-    if(btnFullResMax){
-        await btnFullResMax.addEventListener("click", ()=>{
-            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(101,101)");
-        })
-    }
+    // if(btnFullResMax){
+    //     await btnFullResMax.addEventListener("click", ()=>{
+    //         Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(101,101)");
+    //     })
+    // }
 }
 
 movement();

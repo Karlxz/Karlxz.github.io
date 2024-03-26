@@ -1,9 +1,11 @@
+let divNothing = document.querySelector(".nothing");
 let divTranslate = document.querySelector(".translate");
 let divResize = document.querySelector(".resize");
 
 function setUpMenu(){
 
     // if(divTranslate && divResize){
+        divNothing.style.display = "block";
         divTranslate.style.display = "none";
         divResize.style.display = "none";
     // }
