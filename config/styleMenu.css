@@ -82,28 +82,28 @@
   }
 
   #up{
-    background-image: url('https://Karlxz.github.io/img/Arrow.png');
+    background-image: url('https://Karlxz.github.io/img/arrow.png');
     transform: rotate(-90deg);
     background-size: cover;
     background-position: center;
   }
 
   #right{
-    background-image: url('https://Karlxz.github.io/img/Arrow.png');
+    background-image: url('https://Karlxz.github.io/img/arrow.png');
     transform: rotate(0deg);
     background-size: cover;
     background-position: center;
   }
 
   #left{
-    background-image: url('https://Karlxz.github.io/img/Arrow.png');
+    background-image: url('https://Karlxz.github.io/img/arrow.png');
     transform: rotate(180deg);
     background-size: cover;
     background-position: center;
   }
 
   #down{
-    background-image: url('https://Karlxz.github.io/img/Arrow.png');
+    background-image: url('https://Karlxz.github.io/img/arrow.png');
     transform: rotate(90deg);
     background-size: cover;
     background-position: center;
