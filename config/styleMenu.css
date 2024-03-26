@@ -63,15 +63,15 @@
 
   .actionbtn{
     display: inline-block;
-    width: 25%;
-    padding-top: 24.5%;
+    width: 15%;
+    padding-top: 14.5%;
     cursor: pointer;
     text-align: center;
     color: #ffffff;
     background-color: #ffffff;
     border-radius: 50%;
     /* box-shadow: 0 2px #000000; */
-    margin: auto 70px;
+    margin: auto 55px;
   }
 
   .actionbtn:hover {background-color: #dbe3e49f}
