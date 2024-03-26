@@ -71,7 +71,7 @@
     background-color: #ffffff;
     border-radius: 50%;
     /* box-shadow: 0 2px #000000; */
-    margin-top:15px;
+    /* margin-top:15px; */
   }
 
   .actionbtn:hover {background-color: #dbe3e49f}
@@ -93,7 +93,7 @@
     transform: rotate(0deg);
     background-size: cover;
     background-position: center;
-    margin-left: 35px;
+    margin-left: 50px;
   }
 
   #left{
@@ -101,7 +101,7 @@
     transform: rotate(180deg);
     background-size: cover;
     background-position: center;
-    margin-right: 35px;
+    margin-right: 50px;
   }
 
   #down{
