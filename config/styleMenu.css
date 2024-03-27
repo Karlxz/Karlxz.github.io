@@ -121,7 +121,39 @@
   }
 
   #shrinkHor{
-    background-image: url('https://Karlxz.github.io/img/shrinkHor.png');
+    background-image: url('https://Karlxz.github.io/img/shrinkArrow.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  #expandHor{
+    background-image: url('https://Karlxz.github.io/img/expandArrow.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  #shrink{
+    background-image: url('https://Karlxz.github.io/img/shrink.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  #expand{
+    background-image: url('https://Karlxz.github.io/img/expand.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  #shrinkVer{
+    background-image: url('https://Karlxz.github.io/img/shrinkArrow.png');
+    transform: rotate(90deg);
+    background-size: cover;
+    background-position: center;
+  }
+
+  #expandVer{
+    background-image: url('https://Karlxz.github.io/img/expandArrow.png');
+    transform: rotate(90deg);
     background-size: cover;
     background-position: center;
   }
