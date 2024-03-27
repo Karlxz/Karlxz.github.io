@@ -48,6 +48,15 @@
     text-align:center;
   }
 
+  .rotate{
+    /* background-color: aquamarine; */
+    /* flex: 1; */
+    float: right;
+    height: 100%;
+    width: 80%;
+    text-align:center;
+  }
+
   .btnOption{
     display: inline-block;
     width: 80%;

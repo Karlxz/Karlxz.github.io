@@ -11,13 +11,14 @@ async function movement(){
     let btnFullResMax = document.querySelector("#expand");
     let btnTranslate = document.querySelector("#translate"); 
     let btnResize = document.querySelector("#resize"); 
-    // let btnRotate = document.querySelector("#rotate"); 
+    let btnRotate = document.querySelector("#rotate"); 
     // let btnExtra = document.querySelector("#extra"); 
     
     if(btnTranslate){
         await btnTranslate.addEventListener("click", ()=>{
             divNothing.style.display = "none";
             divResize.style.display = "none";
+            divRotate.style.display = "none";
             divTranslate.style.display = "block";
         })
         
@@ -27,7 +28,17 @@ async function movement(){
         await btnResize.addEventListener("click", ()=>{
             divNothing.style.display = "none";
             divTranslate.style.display = "none";
+            divRotate.style.display = "none";
             divResize.style.display = "block";
+        })
+    }
+
+    if(btnRotate){
+        await btnRotate.addEventListener("click", ()=>{
+            divNothing.style.display = "none";
+            divTranslate.style.display = "none";
+            divResize.style.display = "none";
+            divRotate.style.display = "block";
         })
     }
 
