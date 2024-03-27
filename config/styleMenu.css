@@ -146,14 +146,14 @@
 
   #shrinkVer{
     background-image: url('https://Karlxz.github.io/img/shrinkArrow.png');
-    transform: rotate(90deg);
+    transform: rotate(45deg);
     background-size: cover;
     background-position: center;
   }
 
   #expandVer{
     background-image: url('https://Karlxz.github.io/img/expandArrow.png');
-    transform: rotate(90deg);
+    transform: rotate(45deg);
     background-size: cover;
     background-position: center;
   }
