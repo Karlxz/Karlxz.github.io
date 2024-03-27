@@ -120,6 +120,12 @@
     background-position: center;
   }
 
+  #shinkHor{
+    background-image: url('https://Karlxz.github.io/img/shrinkArrow.png');
+    background-size: cover;
+    background-position: center;
+  }
+
   #translate{
     background-image: url('https://Karlxz.github.io/img/translate.png');
     background-size: cover;
