@@ -9,6 +9,8 @@ async function movement(){
     let btnHorResMax = document.querySelector("#expandHor");
     let btnFullResMin = document.querySelector("#shrink");
     let btnFullResMax = document.querySelector("#expand");
+    let btnRotRight = document.querySelector("#rotRight"); 
+    let btnRotLeft = document.querySelector("#rotLeft"); 
     let btnTranslate = document.querySelector("#translate"); 
     let btnResize = document.querySelector("#resize"); 
     let btnRotate = document.querySelector("#rotate"); 
@@ -101,6 +103,18 @@ async function movement(){
     if(btnFullResMax){
         await btnFullResMax.addEventListener("click", ()=>{
             Photopea.runScript(window.parent, "app.activeDocument.activeLayer.resize(101,101)");
+        })
+    }
+
+    if(btnRotRight){
+        await btnRotRight.addEventListener("click", ()=>{
+            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.rotate(1)");
+        })
+    }
+
+    if(btnRotLeft){
+        await btnRotLeft.addEventListener("click", ()=>{
+            Photopea.runScript(window.parent, "app.activeDocument.activeLayer.rotate(-1)");
         })
     }
 }

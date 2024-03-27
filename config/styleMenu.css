@@ -169,6 +169,18 @@
     background-position: center;
   }
 
+  #rotRight{
+    background-image: url('https://Karlxz.github.io/img/rotateRight.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  #rotLeft{
+    background-image: url('https://Karlxz.github.io/img/rotateLeft.png');
+    background-size: cover;
+    background-position: center;
+  }
+
   #translate{
     background-image: url('https://Karlxz.github.io/img/translate.png');
     background-size: cover;
