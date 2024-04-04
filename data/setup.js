@@ -1,3 +1,7 @@
+// async function addLayer(){
+
+// }
+
 async function setup() {
     let btnMasc = document.querySelector("#masculino");
     let btnFem = document.querySelector("#femenino");
