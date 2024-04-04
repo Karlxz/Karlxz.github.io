@@ -30,7 +30,8 @@ async function setup() {
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara").remove();`);
 
-                await addImageAndWait(window.parent, openData(i));
+                let imagen = openData(i);
+                await addImageAndWait(window.parent, imagen);
                 await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cara";`);
             })
         }
