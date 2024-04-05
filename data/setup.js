@@ -27,14 +27,14 @@ async function setup() {
     for(let i = 0; i < 54 ; i++){
         if(imgCaras[i]){
             await imgCaras[i].addEventListener("click", async ()=>{
-                // if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara");`))
-                //     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara").remove();`);
+                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara");`))
+                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara").remove();`);
 
                 let data = openData(i);
                 data.then((imagen) =>{
-                    console.log("Si jalo: ", imagen);
+                    // console.log("Si jalo: ", imagen);
                     addImageAndWait(window.parent, imagen);
-                    // Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cara";`);
+                    Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cara";`);
                 })
             })
         }
