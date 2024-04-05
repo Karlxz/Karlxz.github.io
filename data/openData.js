@@ -664,10 +664,10 @@ function openData(imagen){
         "https://Karlxz.github.io/img/accesorios/sombreros/01.png",    //18
     ];
 
-    // return carasMascRef[imagen];
-    return new Promise(function(resolve, reject) {
-        resolve(carasMascRef[imagen]);
-    });
+    return carasMascRef[imagen];
+    // return new Promise(function(resolve, reject) {
+    //     resolve(carasMascRef[imagen]);
+    // });
 }   
 
 
