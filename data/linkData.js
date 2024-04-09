@@ -35,151 +35,151 @@ async function linkData(){
     
     if(imgCaras.length!=0){
         for (let i = 0; i < 54; i++){
-            imgCaras[i].src = await openData(i);
+            imgCaras[i].src = openData(i);
         }
     }
 
     if(imgOjos.length != 0){
         for (let i = 0; i < 74; i++){
-            imgOjos[i].src = await openData(i+54);
+            imgOjos[i].src = openData(i+54);
         }
     }
 
     if(imgCejas.length != 0){
         for (let i = 0; i < 30; i++){
-            imgCejas[i].src = await openData(i+128);
+            imgCejas[i].src = openData(i+128);
         }
     }
 
     if(imgNarices.length != 0){
         for (let i = 0; i < 24; i++){
-            imgNarices[i].src = await openData(i+158);
+            imgNarices[i].src = openData(i+158);
         }
     }
 
     if(imgLabios.length != 0){
         for (let i = 0; i < 30; i++){
-            imgLabios[i].src = await openData(i+182);
+            imgLabios[i].src = openData(i+182);
         }
     }
 
     if(imgOrejas.length != 0){
         for (let i = 0; i < 18; i++){
-            imgOrejas[i].src = await openData(i+212);
+            imgOrejas[i].src = openData(i+212);
         }
     }
 
     if(imgPapadas.length != 0){
         for (let i = 0; i < 18; i++){
-            imgPapadas[i].src = await openData(i+230);
+            imgPapadas[i].src = openData(i+230);
         }
     }
 
     if(imgCachetes.length != 0){
         for (let i = 0; i < 12; i++){
-            imgCachetes[i].src = await openData(i+248);
+            imgCachetes[i].src = openData(i+248);
         }
     }
 
     if(imgArrugasEntrecejo.length != 0){
         for (let i = 0; i < 18; i++){
-            imgArrugasEntrecejo[i].src = await openData(i+260);
+            imgArrugasEntrecejo[i].src = openData(i+260);
         }
     }
 
     if(imgArrugasPerioculares.length != 0){
         for (let i = 0; i < 18; i++){
-            imgArrugasPerioculares[i].src = await openData(i+278);
+            imgArrugasPerioculares[i].src = openData(i+278);
         }
     }
 
     if(imgArrugasNasogenianas.length != 0){
         for (let i = 0; i < 18; i++){
-            imgArrugasNasogenianas[i].src = await openData(i+296);
+            imgArrugasNasogenianas[i].src = openData(i+296);
         }
     }
 
     if(imgArrugasPeribucales.length != 0){
         for (let i = 0; i < 18; i++){
-            imgArrugasPeribucales[i].src = await openData(i+314);
+            imgArrugasPeribucales[i].src = openData(i+314);
         }
     }
 
     if(imgAcne.length != 0){
         for (let i = 0; i < 8; i++){
-            imgAcne[i].src = await openData(i+332);
+            imgAcne[i].src = openData(i+332);
         }
     }
 
     if(imgCicatrices.length != 0){
         for (let i = 0; i < 4; i++){
-            imgCicatrices[i].src = await openData(i+340);
+            imgCicatrices[i].src = openData(i+340);
         }
     }
 
     if(imgPecas.length != 0){
         for (let i = 0; i < 2; i++){
-            imgPecas[i].src = await openData(i+344);
+            imgPecas[i].src = openData(i+344);
         }
     }
 
     if(imgVerrugasyLunares.length != 0){
         for (let i = 0; i < 10; i++){
-            imgVerrugasyLunares[i].src = await openData(i+346);
+            imgVerrugasyLunares[i].src = openData(i+346);
         }
     }
 
     if(imgHoyoMenton.length != 0){
         for (let i = 0; i < 12; i++){
-            imgHoyoMenton[i].src = await openData(i+356);
+            imgHoyoMenton[i].src = openData(i+356);
         }
     }
 
     if(imgAsimetrias.length != 0){
         for (let i = 0; i < 7; i++){
-            imgAsimetrias[i].src = await openData(i+368);
+            imgAsimetrias[i].src = openData(i+368);
         }
     }
 
     if(imgTorus.length != 0){
         for (let i = 0; i < 3; i++){
-            imgTorus[i].src = await openData(i+375);
+            imgTorus[i].src = openData(i+375);
         }
     }
 
     if(imgCabelleras.length != 0){
         for (let i = 0; i < 126; i++){
-            imgCabelleras[i].src = await openData(i+378);
+            imgCabelleras[i].src = openData(i+378);
         }
     }
 
     if(imgBigotes.length != 0){
         for (let i = 0; i < 17; i++){
-            imgBigotes[i].src = await openData(i+504);
+            imgBigotes[i].src = openData(i+504);
         }
     }
 
     if(imgBarbas.length != 0){
         for (let i = 0; i < 10; i++){
-            imgBarbas[i].src = await openData(i+521);
+            imgBarbas[i].src = openData(i+521);
         }
     }
 
     if(imgAretes.length != 0){
         for (let i = 0; i < 12; i++){
-            imgAretes[i].src = await openData(i+531);
+            imgAretes[i].src = openData(i+531);
         }
     }
 
     if(imgLentes.length != 0){
         for (let i = 0; i < 19; i++){
-            imgLentes[i].src = await openData(i+543);
+            imgLentes[i].src = openData(i+543);
         }
     }
 
     if(imgSombreros.length != 0){
         for (let i = 0; i < 18; i++){
-            imgSombreros[i].src = await openData(i+562);
+            imgSombreros[i].src = openData(i+562);
         }
     }
     

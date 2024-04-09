@@ -55,7 +55,7 @@ function openData(imagen){
         "https://Karlxz.github.io/img/caras/femenino/B3_F1127.png",    //20
         "https://Karlxz.github.io/img/caras/femenino/B2_F0752.png",    //21
         "https://Karlxz.github.io/img/caras/femenino/B1_F1362.png",    //22
-        "https://Karlxz.github.io/img/caras/femenino/A3_F0195.png",    //23
+        "https://Karlxz.github.io/img/caras/femenino/A3_F1213.png",    //23
         "https://Karlxz.github.io/img/caras/femenino/A2_F1066.png",    //24
         "https://Karlxz.github.io/img/caras/femenino/A1_F0195.png",    //25
         

@@ -370,3 +370,58 @@ async function setup() {
     await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.textItem.size = 24;`);
     await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "scoreCounter";`);*/
 }
+
+
+if(app.activeDocument.layers.getByName("Cara").name!=app.activeDocument.layers.getByName(app.activeDocument.layers[app.activeDocument.layers.length-2].name).name)
+{
+let layer = app.activeDocument.layers.getByName("Cara");
+app.activeDocument.layers.getByName(app.activeDocument.layers[app.activeDocument.layers.length-2].name) = layer;
+app.activeDocument.layers.getByName("Cara") = app.activeDocument.layers.getByName(app.activeDocument.layers[app.activeDocument.layers.length-2].name);
+}      
+
+// Switch off any dialog boxes
+displayDialogs = DialogModes.ALL; // OFF 
+
+shift_layer(-1);
+
+
+// Set Display Dialogs back to normal
+displayDialogs = DialogModes.ALL; // NORMAL
+
+
+// function SHIFT LAYER (direction)
+// --------------------------------------------------------
+function shift_layer(direction)
+{
+  // direction =  1 Moves layer up 1 place to top
+  // direction = -1 Moves layer down 1 place to background
+
+  if(direction == undefined) return -1;
+
+  var where  = (direction > 0) ? ElementPlacement.PLACEBEFORE : ElementPlacement.PLACEAFTER;
+
+  var currentActiveLayer = app.activeDocument.activeLayer;
+  var idx = get_layer_index(currentActiveLayer);
+
+  // Get a reference to the active layer
+  var layerRef = app.activeDocument.layers[app.activeDocument.layers.length-2];
+
+  // Move the new layer set to after the previously first layer
+  currentActiveLayer.move(layerRef, where);
+}
+
+
+function get_layer_index(ref)
+{
+  var numOfArtLayers = app.activeDocument.layers.length;
+
+  // work from the top of the stack down!
+  for (var i = numOfArtLayers -1; i >= 0; i--)
+  {
+    var tempLayer = app.activeDocument.layers[i];
+    if (tempLayer == ref) return i;
+  }
+  
+}
+
+shift_layer(1);
