@@ -1,6 +1,11 @@
-// async function addLayer(){
+function addLayer(offset, layerName){
+    // var getLayerByName = ""
+    if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(` + layerName + `);`))
+        Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(` + layerName + `).remove();`);
 
-// }
+    addImageAndWait(window.parent, openData(i+offset)); //24
+    Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ` + Cara + `;`);
+}
 
 async function setup() {
     let btnMasc = document.querySelector("#masculino");
@@ -26,12 +31,13 @@ async function setup() {
 
     for(let i = 0; i < 54 ; i++){
         if(imgCaras[i]){
-            imgCaras[i].addEventListener("click", async ()=>{
-                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara");`))
-                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara").remove();`);
+            imgCaras[i].addEventListener("click", ()=>{
+                // if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara");`))
+                //     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara").remove();`);
 
-                await addImageAndWait(window.parent, openData(i)); //24
-                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cara";`);
+                // await addImageAndWait(window.parent, openData(i)); //24
+                // await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cara";`);
+                addLayer(0, "Cara")
             })
         }
     }
