@@ -3,8 +3,10 @@ function addLayer(offset, layerName){
     if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(` + layerName + `);`))
         Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(` + layerName + `).remove();`);
 
-    addImageAndWait(window.parent, openData(i+offset)); //24
-    Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ` + Cara + `;`);
+    addImageAndWait(window.parent, openData(i+offset))
+    .then(function(){
+        Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ` + layerName + `;`);
+    });    
 }
 
 function setup() {
