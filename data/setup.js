@@ -11,13 +11,13 @@ async function setup() {
     // if(!app.activeDocument.layers.getByName("Cara")){
     // }
     if (btnMasc){
-        await btnMasc.addEventListener("click", ()=>{
+        btnMasc.addEventListener("click", ()=>{
             divMasc.style.display = 'block';
             divFem.style.display = 'none';
         })
     }
     if(btnFem){
-        await btnFem.addEventListener("click", ()=>{
+        btnFem.addEventListener("click", ()=>{
             divMasc.style.display = 'none';
             divFem.style.display = 'block';
         })
@@ -26,7 +26,7 @@ async function setup() {
 
     for(let i = 0; i < 54 ; i++){
         if(imgCaras[i]){
-            await imgCaras[i].addEventListener("click", async ()=>{
+            imgCaras[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara").remove();`);
 
@@ -38,7 +38,7 @@ async function setup() {
 
     for(let i = 0; i < 74 ; i++){
         if(imgOjos[i]){
-            await imgOjos[i].addEventListener("click", async ()=>{
+            imgOjos[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Ojos");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Ojos").remove();`);
 
@@ -51,7 +51,7 @@ async function setup() {
 
     for(let i = 0; i < 30 ; i++){
         if(imgCejas[i]){
-            await imgCejas[i].addEventListener("click", async ()=>{
+            imgCejas[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cejas");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cejas").remove();`);
 
@@ -64,7 +64,7 @@ async function setup() {
 
     for(let i = 0; i < 24 ; i++){
         if(imgNarices[i]){
-            await imgNarices[i].addEventListener("click", async ()=>{
+            imgNarices[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Nariz");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Nariz").remove();`);
 
@@ -77,7 +77,7 @@ async function setup() {
 
     for(let i = 0; i < 30 ; i++){
         if(imgLabios[i]){
-            await imgLabios[i].addEventListener("click", async ()=>{
+            imgLabios[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Labios");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Labios").remove();`);
 
@@ -90,7 +90,7 @@ async function setup() {
 
     for(let i = 0; i < 18 ; i++){
         if(imgOrejas[i]){
-            await imgOrejas[i].addEventListener("click", async ()=>{
+            imgOrejas[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Orejas");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Orejas").remove();`);
 
@@ -102,7 +102,7 @@ async function setup() {
 
     for(let i = 0; i < 18 ; i++){
         if(imgPapadas[i]){
-            await imgPapadas[i].addEventListener("click", async ()=>{
+            imgPapadas[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Papada");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Papada").remove();`);
 
@@ -115,7 +115,7 @@ async function setup() {
 
     for(let i = 0; i < 12 ; i++){
         if(imgCachetes[i]){
-            await imgCachetes[i].addEventListener("click", async ()=>{
+            imgCachetes[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cachetes");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cachetes").remove();`);
 
@@ -128,7 +128,7 @@ async function setup() {
 
     for(let i = 0; i < 18 ; i++){
         if(imgArrugasEntrecejo[i]){
-            await imgArrugasEntrecejo[i].addEventListener("click", async ()=>{
+            imgArrugasEntrecejo[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Arrugas Entrecejo");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Arrugas Entrecejo").remove();`);
 
@@ -141,7 +141,7 @@ async function setup() {
 
     for(let i = 0; i < 18 ; i++){
         if(imgArrugasPerioculares[i]){
-            await imgArrugasPerioculares[i].addEventListener("click", async ()=>{
+            imgArrugasPerioculares[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Arrugas Perioculares");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Arrugas Perioculares").remove();`);
 
@@ -154,7 +154,7 @@ async function setup() {
 
     for(let i = 0; i < 18 ; i++){
         if(imgArrugasNasogenianas[i]){
-            await imgArrugasNasogenianas[i].addEventListener("click", async ()=>{
+            imgArrugasNasogenianas[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Arrugas Nasogenianas");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Arrugas Nasogenianas").remove();`);
 
@@ -167,7 +167,7 @@ async function setup() {
 
     for(let i = 0; i < 18 ; i++){
         if(imgArrugasPeribucales[i]){
-            await imgArrugasPeribucales[i].addEventListener("click", async ()=>{
+            imgArrugasPeribucales[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Arrugas Peribucales");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Arrugas Peribucales").remove();`);
 
@@ -180,7 +180,7 @@ async function setup() {
 
     for(let i = 0; i < 8 ; i++){
         if(imgAcne[i]){
-            await imgAcne[i].addEventListener("click", async ()=>{
+            imgAcne[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Acne");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Acne").remove();`);
 
@@ -194,7 +194,7 @@ async function setup() {
 
     for(let i = 0; i < 4 ; i++){
         if(imgCicatrices[i]){
-            await imgCicatrices[i].addEventListener("click", async ()=>{
+            imgCicatrices[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cicatrices");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cicatrices").remove();`);
 
@@ -207,7 +207,7 @@ async function setup() {
 
     for(let i = 0; i < 2 ; i++){
         if(imgPecas[i]){
-            await imgPecas[i].addEventListener("click", async ()=>{
+            imgPecas[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Pecas");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Pecas").remove();`);
 
@@ -220,7 +220,7 @@ async function setup() {
 
     for(let i = 0; i < 10 ; i++){
         if(imgVerrugasyLunares[i]){
-            await imgVerrugasyLunares[i].addEventListener("click", async ()=>{
+            imgVerrugasyLunares[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Verrugas y Lunares");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Verrugas y Lunares").remove();`);
 
@@ -233,7 +233,7 @@ async function setup() {
 
     for(let i = 0; i < 12 ; i++){
         if(imgHoyoMenton[i]){
-            await imgHoyoMenton[i].addEventListener("click", async ()=>{
+            imgHoyoMenton[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Hoyo menton");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Hoyo menton").remove();`);
 
@@ -246,7 +246,7 @@ async function setup() {
 
     for(let i = 0; i < 7 ; i++){
         if(imgAsimetrias[i]){
-            await imgAsimetrias[i].addEventListener("click", async ()=>{
+            imgAsimetrias[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Asimetrias");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Asimetrias").remove();`);
 
@@ -259,7 +259,7 @@ async function setup() {
 
     for(let i = 0; i < 3 ; i++){
         if(imgTorus[i]){
-            await imgTorus[i].addEventListener("click", async ()=>{
+            imgTorus[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Torus");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Torus").remove();`);
 
@@ -272,7 +272,7 @@ async function setup() {
 
     for(let i = 0; i < 126 ; i++){
         if(imgCabelleras[i]){
-            await imgCabelleras[i].addEventListener("click", async ()=>{
+            imgCabelleras[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cabellera");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cabellera").remove();`);
 
@@ -285,7 +285,7 @@ async function setup() {
 
     for(let i = 0; i < 17 ; i++){
         if(imgBigotes[i]){
-            await imgBigotes[i].addEventListener("click", async ()=>{
+            imgBigotes[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Bigote");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Bigote").remove();`);
 
@@ -298,7 +298,7 @@ async function setup() {
 
     for(let i = 0; i < 10 ; i++){
         if(imgBarbas[i]){
-            await imgBarbas[i].addEventListener("click", async ()=>{
+            imgBarbas[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Barba");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Barba").remove();`);
 
@@ -311,7 +311,7 @@ async function setup() {
 
     for(let i = 0; i < 12 ; i++){
         if(imgAretes[i]){
-            await imgAretes[i].addEventListener("click", async ()=>{
+            imgAretes[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Aretes");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Aretes").remove();`);
 
@@ -324,7 +324,7 @@ async function setup() {
 
     for(let i = 0; i < 19 ; i++){
         if(imgLentes[i]){
-            await imgLentes[i].addEventListener("click", async ()=>{
+            imgLentes[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Lentes");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Lentes").remove();`);
 
@@ -337,7 +337,7 @@ async function setup() {
 
     for(let i = 0; i < 18 ; i++){
         if(imgSombreros[i]){
-            await imgSombreros[i].addEventListener("click", async ()=>{
+            imgSombreros[i].addEventListener("click", async ()=>{
                 if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Sombrero");`))
                     await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Sombrero").remove();`);
 
@@ -372,56 +372,56 @@ async function setup() {
 }
 
 
-if(app.activeDocument.layers.getByName("Cara").name!=app.activeDocument.layers.getByName(app.activeDocument.layers[app.activeDocument.layers.length-2].name).name)
-{
-let layer = app.activeDocument.layers.getByName("Cara");
-app.activeDocument.layers.getByName(app.activeDocument.layers[app.activeDocument.layers.length-2].name) = layer;
-app.activeDocument.layers.getByName("Cara") = app.activeDocument.layers.getByName(app.activeDocument.layers[app.activeDocument.layers.length-2].name);
-}      
+// if(app.activeDocument.layers.getByName("Cara").name!=app.activeDocument.layers.getByName(app.activeDocument.layers[app.activeDocument.layers.length-2].name).name)
+// {
+// let layer = app.activeDocument.layers.getByName("Cara");
+// app.activeDocument.layers.getByName(app.activeDocument.layers[app.activeDocument.layers.length-2].name) = layer;
+// app.activeDocument.layers.getByName("Cara") = app.activeDocument.layers.getByName(app.activeDocument.layers[app.activeDocument.layers.length-2].name);
+// }      
 
 // Switch off any dialog boxes
-displayDialogs = DialogModes.ALL; // OFF 
+// displayDialogs = DialogModes.ALL; // OFF 
 
-shift_layer(-1);
-
-
-// Set Display Dialogs back to normal
-displayDialogs = DialogModes.ALL; // NORMAL
+// shift_layer(-1);
 
 
-// function SHIFT LAYER (direction)
-// --------------------------------------------------------
-function shift_layer(direction)
-{
-  // direction =  1 Moves layer up 1 place to top
-  // direction = -1 Moves layer down 1 place to background
-
-  if(direction == undefined) return -1;
-
-  var where  = (direction > 0) ? ElementPlacement.PLACEBEFORE : ElementPlacement.PLACEAFTER;
-
-  var currentActiveLayer = app.activeDocument.activeLayer;
-  var idx = get_layer_index(currentActiveLayer);
-
-  // Get a reference to the active layer
-  var layerRef = app.activeDocument.layers[app.activeDocument.layers.length-2];
-
-  // Move the new layer set to after the previously first layer
-  currentActiveLayer.move(layerRef, where);
-}
+// // Set Display Dialogs back to normal
+// displayDialogs = DialogModes.ALL; // NORMAL
 
 
-function get_layer_index(ref)
-{
-  var numOfArtLayers = app.activeDocument.layers.length;
+// // function SHIFT LAYER (direction)
+// // --------------------------------------------------------
+// function shift_layer(direction)
+// {
+//   // direction =  1 Moves layer up 1 place to top
+//   // direction = -1 Moves layer down 1 place to background
 
-  // work from the top of the stack down!
-  for (var i = numOfArtLayers -1; i >= 0; i--)
-  {
-    var tempLayer = app.activeDocument.layers[i];
-    if (tempLayer == ref) return i;
-  }
+//   if(direction == undefined) return -1;
+
+//   var where  = (direction > 0) ? ElementPlacement.PLACEBEFORE : ElementPlacement.PLACEAFTER;
+
+//   var currentActiveLayer = app.activeDocument.activeLayer;
+//   var idx = get_layer_index(currentActiveLayer);
+
+//   // Get a reference to the active layer
+//   var layerRef = app.activeDocument.layers[app.activeDocument.layers.length-2];
+
+//   // Move the new layer set to after the previously first layer
+//   currentActiveLayer.move(layerRef, where);
+// }
+
+
+// function get_layer_index(ref)
+// {
+//   var numOfArtLayers = app.activeDocument.layers.length;
+
+//   // work from the top of the stack down!
+//   for (var i = numOfArtLayers -1; i >= 0; i--)
+//   {
+//     var tempLayer = app.activeDocument.layers[i];
+//     if (tempLayer == ref) return i;
+//   }
   
-}
+// }
 
-shift_layer(1);
+// shift_layer(1);
