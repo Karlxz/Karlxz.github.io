@@ -7,7 +7,7 @@ function addLayer(offset, layerName){
     Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ` + Cara + `;`);
 }
 
-async function setup() {
+function setup() {
     let btnMasc = document.querySelector("#masculino");
     let btnFem = document.querySelector("#femenino");
     //await Photopea.runScript(window.parent, "app.documents.add(800, 700, 72, 'CARAMEX')");
