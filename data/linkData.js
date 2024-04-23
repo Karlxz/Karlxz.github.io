@@ -44,99 +44,99 @@ function linkData(){
     }
 
     if(imgOjos.length != 0){
-        putSource(imgCaras,74,54);
+        putSource(imgOjos,74,54);
     }
 
     if(imgCejas.length != 0){
-        putSource(imgCaras,30,128);
+        putSource(imgCejas,30,128);
     }
 
     if(imgNarices.length != 0){
-        putSource(imgCaras,24,158);
+        putSource(imgNarices,24,158);
     }
 
     if(imgLabios.length != 0){
-        putSource(imgCaras,30,182);
+        putSource(imgLabios,30,182);
     }
 
     if(imgOrejas.length != 0){
-        putSource(imgCaras,18,212);
+        putSource(imgOrejas,18,212);
     }
 
     if(imgPapadas.length != 0){
-        putSource(imgCaras,18,230);
+        putSource(imgPapadas,18,230);
     }
 
     if(imgCachetes.length != 0){
-        putSource(imgCaras,12,248);
+        putSource(imgCachetes,12,248);
     }
 
     if(imgArrugasEntrecejo.length != 0){
-        putSource(imgCaras,18,260);
+        putSource(imgArrugasEntrecejo,18,260);
     }
 
     if(imgArrugasPerioculares.length != 0){
-        putSource(imgCaras,18,278);
+        putSource(imgArrugasPerioculares,18,278);
     }
 
     if(imgArrugasNasogenianas.length != 0){
-        putSource(imgCaras,18,296);
+        putSource(imgArrugasNasogenianas,18,296);
     }
 
     if(imgArrugasPeribucales.length != 0){
-        putSource(imgCaras,18,314);
+        putSource(imgArrugasPeribucales,18,314);
     }
 
     if(imgAcne.length != 0){
-        putSource(imgCaras,8,332);
+        putSource(imgAcne,8,332);
     }
 
     if(imgCicatrices.length != 0){
-        putSource(imgCaras,4,340);
+        putSource(imgCicatrices,4,340);
     }
 
     if(imgPecas.length != 0){
-        putSource(imgCaras,2,344);
+        putSource(imgPecas,2,344);
     }
 
     if(imgVerrugasyLunares.length != 0){
-        putSource(imgCaras,10,346);
+        putSource(imgVerrugasyLunares,10,346);
     }
 
     if(imgHoyoMenton.length != 0){
-        putSource(imgCaras,12,356);
+        putSource(imgHoyoMenton,12,356);
     }
 
     if(imgAsimetrias.length != 0){
-        putSource(imgCaras,7,368);
+        putSource(imgAsimetrias,7,368);
     }
 
     if(imgTorus.length != 0){
-        putSource(imgCaras,3,375);
+        putSource(imgTorus,3,375);
     }
 
     if(imgCabelleras.length != 0){
-        putSource(imgCaras,126,378);
+        putSource(imgCabelleras,126,378);
     }
 
     if(imgBigotes.length != 0){
-        putSource(imgCaras,17,504);
+        putSource(imgBigotes,17,504);
     }
 
     if(imgBarbas.length != 0){
-        putSource(imgCaras,10,521);
+        putSource(imgBarbas,10,521);
     }
 
     if(imgAretes.length != 0){
-        putSource(imgCaras,12,531);
+        putSource(imgAretes,12,531);
     }
 
     if(imgLentes.length != 0){
-        putSource(imgCaras,19,543);
+        putSource(imgLentes,19,543);
     }
 
     if(imgSombreros.length != 0){
-        putSource(imgCaras,18,562);
+        putSource(imgSombreros,18,562);
     }
     
     return new Promise(function(resolve, reject) {
