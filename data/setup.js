@@ -1,12 +1,12 @@
-function addLayer(offset, layerName){
+function addLayer(i, offset, layerName){
     // var getLayerByName = ""
     if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara");`)){
         Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cara").remove();`)
-            .then(() => {return addImageAndWait(window.parent, openData(i+offset))})
-            .then(() => {return Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cara";`)})
+            .then(() => addImageAndWait(window.parent, openData(i+offset)))
+            .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cara";`))
     }else{
         addImageAndWait(window.parent, openData(i+offset))
-            .then(() => {return Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cara";`)})
+            .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cara";`))
     }
 
     // addImageAndWait(window.parent, openData(i+offset))
@@ -43,7 +43,7 @@ function setup() {
 
                 // await addImageAndWait(window.parent, openData(i)); //24
                 // await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cara";`);
-                addLayer(0, "Cara")
+                addLayer(i, 0, "Cara")
             })
         }
     }
