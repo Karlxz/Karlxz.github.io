@@ -1,11 +1,12 @@
 function addLayer(offset, layerName){
     // var getLayerByName = ""
-    if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(` + layerName + `);`))
-        Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(` + layerName + `).remove();`);
+    if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(${layerName});`)){
+        Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(${layerName}).remove();`);
+    }
 
     addImageAndWait(window.parent, openData(i+offset))
     .then(function(){
-        Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ` + layerName + `;`);
+        Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ${layerName};`);
     });    
 }
 
@@ -15,8 +16,6 @@ function setup() {
     //await Photopea.runScript(window.parent, "app.documents.add(800, 700, 72, 'CARAMEX')");
     //await Photopea.runScript(window.parent, "app.UI.fitTheArea()");
     
-    // if(!app.activeDocument.layers.getByName("Cara")){
-    // }
     if (btnMasc){
         btnMasc.addEventListener("click", ()=>{
             divMasc.style.display = 'block';
