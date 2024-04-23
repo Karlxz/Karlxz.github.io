@@ -7,13 +7,13 @@ function addLayer(i, offset, layerName){
     //     .catch(() => addImageAndWait(window.parent, openData(i+offset)).then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ` + layerName + `;`)))
 
 
-    if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(` + layerName + `);`)){
-        Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(` + layerName + `).remove();`)
+    if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(${layerName});`)){
+        Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(${layerName}).remove();`)
             .then(() => addImageAndWait(window.parent, openData(i+offset)))
-            .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ` + layerName + `;`))
+            .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ${layerName};`))
     }else{
         addImageAndWait(window.parent, openData(i+offset))
-            .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ` + layerName + `;`))
+            .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ${layerName};`))
     }
 
     
@@ -62,7 +62,6 @@ function setup() {
     for(let i = 0; i < 30 ; i++){
         if(imgCejas[i]){
             imgCejas[i].addEventListener("click", ()=>{
-                
                 addLayer(i, 128, "Cejas");
             })
         }
