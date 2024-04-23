@@ -1,10 +1,10 @@
 function addLayer(i, offset, layerName){
     
-    Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("${layerName}");`)
-        .then(() => Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("${layerName}").remove();`))
+    Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(` + layerName + `);`)
+        .then(() => Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(` + layerName + `).remove();`))
         .then(() => addImageAndWait(window.parent, openData(i+offset)))
-        .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "${layerName}";`))
-        .catch(() => addImageAndWait(window.parent, openData(i+offset)).then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "${layerName}";`)))
+        .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ` + layerName + `;`))
+        .catch(() => addImageAndWait(window.parent, openData(i+offset)).then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ` + layerName + `;`)))
 
 
     // if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(${layerName});`)){
@@ -152,12 +152,7 @@ function setup() {
     for(let i = 0; i < 4 ; i++){
         if(imgCicatrices[i]){
             imgCicatrices[i].addEventListener("click", ()=>{
-                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cicatrices");`))
-                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cicatrices").remove();`);
-
-                await addImageAndWait(window.parent, openData(i+340)); //24
-                //await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,64)");
-                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cicatrices";`);
+                addLayer(i, 340, "Cicatrices");
             })
         }
     }
@@ -165,12 +160,7 @@ function setup() {
     for(let i = 0; i < 2 ; i++){
         if(imgPecas[i]){
             imgPecas[i].addEventListener("click", ()=>{
-                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Pecas");`))
-                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Pecas").remove();`);
-
-                await addImageAndWait(window.parent, openData(i+344)); //24
-                //await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,64)");
-                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Pecas";`);
+                addLayer(i, 344, "Pecas");
             })
         }
     }
@@ -178,12 +168,7 @@ function setup() {
     for(let i = 0; i < 10 ; i++){
         if(imgVerrugasyLunares[i]){
             imgVerrugasyLunares[i].addEventListener("click", ()=>{
-                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Verrugas y Lunares");`))
-                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Verrugas y Lunares").remove();`);
-
-                await addImageAndWait(window.parent, openData(i+346)); //24
-                //await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,64)");
-                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Verrugas y Lunares";`);
+                addLayer(i, 346, "Verrugas y Lunares");
             })
         }
     }
@@ -191,12 +176,7 @@ function setup() {
     for(let i = 0; i < 12 ; i++){
         if(imgHoyoMenton[i]){
             imgHoyoMenton[i].addEventListener("click", ()=>{
-                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Hoyo menton");`))
-                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Hoyo menton").remove();`);
-
-                await addImageAndWait(window.parent, openData(i+356)); //24
-                //await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,64)");
-                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Hoyo menton";`);
+                addLayer(i, 356, "Hoyo menton");
             })
         }
     }
@@ -204,12 +184,7 @@ function setup() {
     for(let i = 0; i < 7 ; i++){
         if(imgAsimetrias[i]){
             imgAsimetrias[i].addEventListener("click", ()=>{
-                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Asimetrias");`))
-                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Asimetrias").remove();`);
-
-                await addImageAndWait(window.parent, openData(i+368)); //24
-                await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,0)")
-                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Asimetrias";`);
+                addLayer(i, 368, "Asimetrias");
             })
         }
     }
@@ -217,12 +192,7 @@ function setup() {
     for(let i = 0; i < 3 ; i++){
         if(imgTorus[i]){
             imgTorus[i].addEventListener("click", ()=>{
-                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Torus");`))
-                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Torus").remove();`);
-
-                await addImageAndWait(window.parent, openData(i+375)); //24
-                //await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,64)");
-                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Torus";`);
+                addLayer(i, 375, "Torus");
             })
         }
     }
@@ -230,12 +200,7 @@ function setup() {
     for(let i = 0; i < 126 ; i++){
         if(imgCabelleras[i]){
             imgCabelleras[i].addEventListener("click", ()=>{
-                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cabellera");`))
-                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cabellera").remove();`);
-
-                await addImageAndWait(window.parent, openData(i+378)); //24
-                //await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,64)");
-                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cabellera";`);
+                addLayer(i, 378, "Cabellera");
             })
         }
     }
@@ -243,12 +208,7 @@ function setup() {
     for(let i = 0; i < 17 ; i++){
         if(imgBigotes[i]){
             imgBigotes[i].addEventListener("click", ()=>{
-                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Bigote");`))
-                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Bigote").remove();`);
-
-                await addImageAndWait(window.parent, openData(i+504)); //24
-                //await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,64)");
-                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Bigote";`);
+                addLayer(i, 504, "Bigote");
             })
         }
     }
@@ -256,12 +216,7 @@ function setup() {
     for(let i = 0; i < 10 ; i++){
         if(imgBarbas[i]){
             imgBarbas[i].addEventListener("click", ()=>{
-                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Barba");`))
-                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Barba").remove();`);
-
-                await addImageAndWait(window.parent, openData(i+521)); //24
-                //await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,64)");
-                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Barba";`);
+                addLayer(i, 521, "Barba");
             })
         }
     }
@@ -269,12 +224,7 @@ function setup() {
     for(let i = 0; i < 12 ; i++){
         if(imgAretes[i]){
             imgAretes[i].addEventListener("click", ()=>{
-                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Aretes");`))
-                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Aretes").remove();`);
-
-                await addImageAndWait(window.parent, openData(i+531)); //24
-                //await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,64)");
-                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Aretes";`);
+                addLayer(i, 332, "Aretes");
             })
         }
     }
@@ -282,12 +232,7 @@ function setup() {
     for(let i = 0; i < 19 ; i++){
         if(imgLentes[i]){
             imgLentes[i].addEventListener("click", ()=>{
-                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Lentes");`))
-                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Lentes").remove();`);
-
-                await addImageAndWait(window.parent, openData(i+543)); //24
-                //await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,64)");
-                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Lentes";`);
+                addLayer(i, 543, "Lentes");
             })
         }
     }
@@ -295,12 +240,7 @@ function setup() {
     for(let i = 0; i < 18 ; i++){
         if(imgSombreros[i]){
             imgSombreros[i].addEventListener("click", ()=>{
-                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Sombrero");`))
-                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Sombrero").remove();`);
-
-                await addImageAndWait(window.parent, openData(i+562)); //24
-                //await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,64)");
-                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Sombrero";`);
+                addLayer(i, 562, "Sombrero");
             })
         }
     }
