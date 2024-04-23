@@ -26,7 +26,13 @@ let imgSombreros = document.querySelectorAll("#sombreros");
 let divMasc = document.querySelector(".masc");
 let divFem = document.querySelector(".fem");
 
-async function linkData(){
+function putSource(menu, num, offset){
+    for (let i = 0; i < num; i++){
+        menu[i].src = openData(i + offset);
+    }
+}
+
+function linkData(){
 
     if(divMasc && divFem){
         divMasc.style.display = 'block';
@@ -34,9 +40,7 @@ async function linkData(){
     }
     
     if(imgCaras.length!=0){
-        for (let i = 0; i < 54; i++){
-            imgCaras[i].src = openData(i);
-        }
+        putSource(imgCaras,54,0)
     }
 
     if(imgOjos.length != 0){
