@@ -1,5 +1,6 @@
 function addLayer(i, offset, layerName){
-    // var getLayerByName = ""
+    var getLayerByName = Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(${layerName});`)
+    console.log(getLayerByName)
     if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(${layerName});`)){
         Photopea.runScript(window.parent, `app.activeDocument.layers.getByName(${layerName}).remove();`)
             .then(() => addImageAndWait(window.parent, openData(i+offset)))
@@ -38,33 +39,24 @@ function setup() {
     for(let i = 0; i < 54 ; i++){
         if(imgCaras[i]){
             imgCaras[i].addEventListener("click", ()=>{
-                addLayer(i, 0, "Cara")
+                addLayer(i, 0, "Cara");
             })
         }
     }
 
     for(let i = 0; i < 74 ; i++){
         if(imgOjos[i]){
-            imgOjos[i].addEventListener("click", async ()=>{
-                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Ojos");`))
-                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Ojos").remove();`);
-
-                await addImageAndWait(window.parent, openData(i+54)); //24
-                await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,-34)");
-                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Ojos";`);
+            imgOjos[i].addEventListener("click", ()=>{
+                addLayer(i, 54, "Ojos");
             })
         }
     }
 
     for(let i = 0; i < 30 ; i++){
         if(imgCejas[i]){
-            imgCejas[i].addEventListener("click", async ()=>{
-                if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cejas");`))
-                    await Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("Cejas").remove();`);
-
-                await addImageAndWait(window.parent, openData(i+128)); //24
-                await Photopea.runScript(window.parent, "app.activeDocument.activeLayer.translate(0,-55)");
-                await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "Cejas";`);
+            imgCejas[i].addEventListener("click", ()=>{
+                
+                addLayer(i, 128, "Cejas");
             })
         }
     }
