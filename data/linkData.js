@@ -40,151 +40,103 @@ function linkData(){
     }
     
     if(imgCaras.length!=0){
-        putSource(imgCaras,54,0)
+        putSource(imgCaras,54,0);
     }
 
     if(imgOjos.length != 0){
-        for (let i = 0; i < 74; i++){
-            imgOjos[i].src = openData(i+54);
-        }
+        putSource(imgCaras,74,54);
     }
 
     if(imgCejas.length != 0){
-        for (let i = 0; i < 30; i++){
-            imgCejas[i].src = openData(i+128);
-        }
+        putSource(imgCaras,30,128);
     }
 
     if(imgNarices.length != 0){
-        for (let i = 0; i < 24; i++){
-            imgNarices[i].src = openData(i+158);
-        }
+        putSource(imgCaras,24,158);
     }
 
     if(imgLabios.length != 0){
-        for (let i = 0; i < 30; i++){
-            imgLabios[i].src = openData(i+182);
-        }
+        putSource(imgCaras,30,182);
     }
 
     if(imgOrejas.length != 0){
-        for (let i = 0; i < 18; i++){
-            imgOrejas[i].src = openData(i+212);
-        }
+        putSource(imgCaras,18,212);
     }
 
     if(imgPapadas.length != 0){
-        for (let i = 0; i < 18; i++){
-            imgPapadas[i].src = openData(i+230);
-        }
+        putSource(imgCaras,18,230);
     }
 
     if(imgCachetes.length != 0){
-        for (let i = 0; i < 12; i++){
-            imgCachetes[i].src = openData(i+248);
-        }
+        putSource(imgCaras,12,248);
     }
 
     if(imgArrugasEntrecejo.length != 0){
-        for (let i = 0; i < 18; i++){
-            imgArrugasEntrecejo[i].src = openData(i+260);
-        }
+        putSource(imgCaras,18,260);
     }
 
     if(imgArrugasPerioculares.length != 0){
-        for (let i = 0; i < 18; i++){
-            imgArrugasPerioculares[i].src = openData(i+278);
-        }
+        putSource(imgCaras,18,278);
     }
 
     if(imgArrugasNasogenianas.length != 0){
-        for (let i = 0; i < 18; i++){
-            imgArrugasNasogenianas[i].src = openData(i+296);
-        }
+        putSource(imgCaras,18,296);
     }
 
     if(imgArrugasPeribucales.length != 0){
-        for (let i = 0; i < 18; i++){
-            imgArrugasPeribucales[i].src = openData(i+314);
-        }
+        putSource(imgCaras,18,314);
     }
 
     if(imgAcne.length != 0){
-        for (let i = 0; i < 8; i++){
-            imgAcne[i].src = openData(i+332);
-        }
+        putSource(imgCaras,8,332);
     }
 
     if(imgCicatrices.length != 0){
-        for (let i = 0; i < 4; i++){
-            imgCicatrices[i].src = openData(i+340);
-        }
+        putSource(imgCaras,4,340);
     }
 
     if(imgPecas.length != 0){
-        for (let i = 0; i < 2; i++){
-            imgPecas[i].src = openData(i+344);
-        }
+        putSource(imgCaras,2,344);
     }
 
     if(imgVerrugasyLunares.length != 0){
-        for (let i = 0; i < 10; i++){
-            imgVerrugasyLunares[i].src = openData(i+346);
-        }
+        putSource(imgCaras,10,346);
     }
 
     if(imgHoyoMenton.length != 0){
-        for (let i = 0; i < 12; i++){
-            imgHoyoMenton[i].src = openData(i+356);
-        }
+        putSource(imgCaras,12,356);
     }
 
     if(imgAsimetrias.length != 0){
-        for (let i = 0; i < 7; i++){
-            imgAsimetrias[i].src = openData(i+368);
-        }
+        putSource(imgCaras,7,368);
     }
 
     if(imgTorus.length != 0){
-        for (let i = 0; i < 3; i++){
-            imgTorus[i].src = openData(i+375);
-        }
+        putSource(imgCaras,3,375);
     }
 
     if(imgCabelleras.length != 0){
-        for (let i = 0; i < 126; i++){
-            imgCabelleras[i].src = openData(i+378);
-        }
+        putSource(imgCaras,126,378);
     }
 
     if(imgBigotes.length != 0){
-        for (let i = 0; i < 17; i++){
-            imgBigotes[i].src = openData(i+504);
-        }
+        putSource(imgCaras,17,504);
     }
 
     if(imgBarbas.length != 0){
-        for (let i = 0; i < 10; i++){
-            imgBarbas[i].src = openData(i+521);
-        }
+        putSource(imgCaras,10,521);
     }
 
     if(imgAretes.length != 0){
-        for (let i = 0; i < 12; i++){
-            imgAretes[i].src = openData(i+531);
-        }
+        putSource(imgCaras,12,531);
     }
 
     if(imgLentes.length != 0){
-        for (let i = 0; i < 19; i++){
-            imgLentes[i].src = openData(i+543);
-        }
+        putSource(imgCaras,19,543);
     }
 
     if(imgSombreros.length != 0){
-        for (let i = 0; i < 18; i++){
-            imgSombreros[i].src = openData(i+562);
-        }
+        putSource(imgCaras,18,562);
     }
     
     return new Promise(function(resolve, reject) {
