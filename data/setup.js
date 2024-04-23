@@ -2,11 +2,11 @@ function addLayer(offset, layerName){
     // var getLayerByName = ""
     if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("${layerName}");`)){
         Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("${layerName}").remove();`)
-            .then(() => {addImageAndWait(window.parent, openData(i+offset))})
-            .then(() => {Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "${layerName}";`)})
+            .then(() => {return addImageAndWait(window.parent, openData(i+offset))})
+            .then(() => {return Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "${layerName}";`)})
     }else{
         addImageAndWait(window.parent, openData(i+offset))
-            .then(() => {Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ${layerName};`)})
+            .then(() => {return Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ${layerName};`)})
     }
 
     // addImageAndWait(window.parent, openData(i+offset))
