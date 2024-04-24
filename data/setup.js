@@ -4,9 +4,11 @@ function addLayer(i, offset, layerName){
         Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `").remove();`)
             .then(() => addImageAndWait(window.parent, openData(i+offset)))
             .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`))
+            .then(() => {console.log("Se borro una capa");})
     }else{
         addImageAndWait(window.parent, openData(i+offset))
             .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`))
+            .then(() => {console.log("No se borro nada");})
     }
     
     
