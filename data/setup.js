@@ -1,4 +1,4 @@
-async function addLayer(i, offset, layerName){
+function addLayer(i, offset, layerName){
     
     // if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `");`)){
     //     Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `").remove();`)
