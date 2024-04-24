@@ -13,8 +13,8 @@ function addLayer(i, offset, layerName){
     Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `");`)
         .then(() => Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `").remove();`))
         .then(() => addImageAndWait(window.parent, openData(i+offset)))
-        .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`))
-        .catch(() => {addImageAndWait(window.parent, openData(i+offset)).then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`))})
+        .then(() => {Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`); console.log("Hola 1");})
+        .catch(() => {addImageAndWait(window.parent, openData(i+offset)).then(() => {Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`); console.log("Hola 2");})})
 
     
     // addImageAndWait(window.parent, openData(i+offset))
