@@ -14,8 +14,7 @@ function addLayer(i, offset, layerName){
             .then(() => addImageAndWait(window.parent, openData(i+offset)))
             .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`))
             // .then((result) => resultado = result)
-            .catch(() => addImageAndWait(window.parent, openData(i+offset))
-                .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`)))
+            .catch(() => addImageAndWait(window.parent, openData(i+offset)).then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`)))
                 // .then((result) => resultado = result)
     // addImageAndWait(window.parent, openData(i+offset))
     // .then(function(){
@@ -24,7 +23,7 @@ function addLayer(i, offset, layerName){
     // console.log(resultado);
 }
 
-function setup() {
+async function setup() {
     let btnMasc = document.querySelector("#masculino");
     let btnFem = document.querySelector("#femenino");
     //await Photopea.runScript(window.parent, "app.documents.add(800, 700, 72, 'CARAMEX')");
@@ -46,7 +45,7 @@ function setup() {
 
     for(let i = 0; i < 54 ; i++){
         if(imgCaras[i]){
-            imgCaras[i].addEventListener("click", ()=>{
+            await imgCaras[i].addEventListener("click", ()=>{
                 addLayer(i, 0, "Cara");
             })
         }
@@ -54,7 +53,7 @@ function setup() {
 
     for(let i = 0; i < 74 ; i++){
         if(imgOjos[i]){
-            imgOjos[i].addEventListener("click", ()=>{
+            await imgOjos[i].addEventListener("click", ()=>{
                 addLayer(i, 54, "Ojos");
             })
         }
