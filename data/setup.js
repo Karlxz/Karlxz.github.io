@@ -12,10 +12,10 @@ async function addLayer(i, offset, layerName){
         Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `");`)
             .then(() => Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `").remove();`))
             .then(() => addImageAndWait(window.parent, openData(i+offset)))
-            .then(async () => await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`))
+            .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`))
             // .then((result) => resultado = result)
             .catch(() => addImageAndWait(window.parent, openData(i+offset))
-                .then(async () => await Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`)))
+                .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`)))
                 // .then((result) => resultado = result)
     // addImageAndWait(window.parent, openData(i+offset))
     // .then(function(){
