@@ -1,4 +1,4 @@
-function addLayer(i, offset, layerName){
+async function addLayer(i, offset, layerName){
     
     // if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `");`)){
     //     Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `").remove();`)
@@ -8,15 +8,19 @@ function addLayer(i, offset, layerName){
     //     addImageAndWait(window.parent, openData(i+offset))
     //         .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`))
     // }
+    var addLayerPromise = new Promise(function(resolve, reject) {
     
-    
-    Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `");`)
-        .then(() => Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `").remove();`))
-        .then(() => addImageAndWait(window.parent, openData(i+offset)))
-        .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`))
-        .catch(() => addImageAndWait(window.parent, openData(i+offset)).then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`)))
+        Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `");`)
+            .then(() => Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `").remove();`))
+            .then(() => addImageAndWait(window.parent, openData(i+offset)))
+            .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`))
+            .then(() => resolve())
+            .catch(() => addImageAndWait(window.parent, openData(i+offset))
+                .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`)))
+                .then(() => resolve())
+    });
 
-    
+    return await addLayerPromise
     // addImageAndWait(window.parent, openData(i+offset))
     // .then(function(){
     //     Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ${layerName};`);
@@ -45,8 +49,8 @@ function setup() {
 
     for(let i = 0; i < 54 ; i++){
         if(imgCaras[i]){
-            imgCaras[i].addEventListener("click", ()=>{
-                addLayer(i, 0, "Cara");
+            imgCaras[i].addEventListener("click", async ()=>{
+                await addLayer(i, 0, "Cara");
             })
         }
     }
