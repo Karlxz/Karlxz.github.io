@@ -8,20 +8,20 @@ function addLayer(i, offset, layerName){
     //     addImageAndWait(window.parent, openData(i+offset))
     //         .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`))
     // }
-        var resultado;
+        // var resultado;
         Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `");`)
             .then(() => Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `").remove();`))
             .then(() => addImageAndWait(window.parent, openData(i+offset)))
             .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`))
-            .then((result) => resultado = result)
+            // .then((result) => resultado = result)
             .catch(() => addImageAndWait(window.parent, openData(i+offset))
                 .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`)))
-                .then((result) => resultado = result)
+                // .then((result) => resultado = result)
     // addImageAndWait(window.parent, openData(i+offset))
     // .then(function(){
     //     Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ${layerName};`);
     // });    
-    console.log(resultado);
+    // console.log(resultado);
 }
 
 function setup() {
@@ -46,8 +46,8 @@ function setup() {
 
     for(let i = 0; i < 54 ; i++){
         if(imgCaras[i]){
-            imgCaras[i].addEventListener("click", async ()=>{
-                await addLayer(i, 0, "Cara");
+            imgCaras[i].addEventListener("click", ()=>{
+                addLayer(i, 0, "Cara");
             })
         }
     }
