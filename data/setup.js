@@ -8,19 +8,19 @@ function addLayer(i, offset, layerName){
     //     addImageAndWait(window.parent, openData(i+offset))
     //         .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`))
     // }
-        // var resultado;
-        Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `");`)
-            .then(() => Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `").remove();`))
-            .then(() => addImageAndWait(window.parent, openData(i+offset)))
-            .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`))
-            // .then((result) => resultado = result)
-            .catch(() => addImageAndWait(window.parent, openData(i+offset)).then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`)))
-                // .then((result) => resultado = result)
+    
+    
+    Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `");`)
+        .then(() => Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `").remove();`))
+        .then(() => addImageAndWait(window.parent, openData(i+offset)))
+        .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`))
+        .catch(() => addImageAndWait(window.parent, openData(i+offset)).then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`)))
+
+    
     // addImageAndWait(window.parent, openData(i+offset))
     // .then(function(){
     //     Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ${layerName};`);
     // });    
-    // console.log(resultado);
 }
 
 async function setup() {
