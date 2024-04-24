@@ -45,7 +45,7 @@ async function setup() {
 
     for(let i = 0; i < 54 ; i++){
         if(imgCaras[i]){
-            await imgCaras[i].addEventListener("click", ()=>{
+            imgCaras[i].addEventListener("click", ()=>{
                 addLayer(i, 0, "Cara");
             })
         }
@@ -53,7 +53,7 @@ async function setup() {
 
     for(let i = 0; i < 74 ; i++){
         if(imgOjos[i]){
-            await imgOjos[i].addEventListener("click", ()=>{
+            imgOjos[i].addEventListener("click", ()=>{
                 addLayer(i, 54, "Ojos");
             })
         }
