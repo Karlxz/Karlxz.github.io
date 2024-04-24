@@ -1,4 +1,4 @@
-function addLayer(i, offset, layerName){
+async function addLayer(i, offset, layerName){
     
     if(Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `");`)){
         Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `").remove();`)
@@ -10,6 +10,10 @@ function addLayer(i, offset, layerName){
             .then(() => Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`))
             .then(() => {console.log("No se borro nada");})
     }
+
+    return new Promise(function(resolve, reject) {
+        resolve();
+    });
     
     
     // Photopea.runScript(window.parent, `app.activeDocument.layers.getByName("` + layerName + `");`)
@@ -17,15 +21,9 @@ function addLayer(i, offset, layerName){
     //     .then(() => addImageAndWait(window.parent, openData(i+offset)))
     //     .then(() => {Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`); console.log("Hola 1");})
     //     .catch(() => {addImageAndWait(window.parent, openData(i+offset)).then(() => {Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = "` + layerName + `";`); console.log("Hola 2");})})
-
-    
-    // addImageAndWait(window.parent, openData(i+offset))
-    // .then(function(){
-    //     Photopea.runScript(window.parent, `app.activeDocument.activeLayer.name = ${layerName};`);
-    // });    
 }
 
-async function setup() {
+function setup() {
     let btnMasc = document.querySelector("#masculino");
     let btnFem = document.querySelector("#femenino");
     //await Photopea.runScript(window.parent, "app.documents.add(800, 700, 72, 'CARAMEX')");
@@ -47,31 +45,31 @@ async function setup() {
 
     for(let i = 0; i < 54 ; i++){
         if(imgCaras[i]){
-            await imgCaras[i].addEventListener("click", ()=>{
-                addLayer(i, 0, "Cara");
+            imgCaras[i].addEventListener("click", async ()=>{
+                await addLayer(i, 0, "Cara");
             })
         }
     }
 
     for(let i = 0; i < 74 ; i++){
         if(imgOjos[i]){
-            await imgOjos[i].addEventListener("click", ()=>{
-                addLayer(i, 54, "Ojos");
+            imgOjos[i].addEventListener("click", async ()=>{
+                await addLayer(i, 54, "Ojos");
             })
         }
     }
 
     for(let i = 0; i < 30 ; i++){
         if(imgCejas[i]){
-            await imgCejas[i].addEventListener("click", ()=>{
-                addLayer(i, 128, "Cejas");
+            imgCejas[i].addEventListener("click", async ()=>{
+                await addLayer(i, 128, "Cejas");
             })
         }
     }
 
     for(let i = 0; i < 24 ; i++){
         if(imgNarices[i]){
-            await imgNarices[i].addEventListener("click", ()=>{
+            imgNarices[i].addEventListener("click", ()=>{
                 addLayer(i, 158, "Nariz");
             })
         }
