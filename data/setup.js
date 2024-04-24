@@ -45,7 +45,7 @@ async function setup() {
 
     for(let i = 0; i < 54 ; i++){
         if(imgCaras[i]){
-            imgCaras[i].addEventListener("click", ()=>{
+            await imgCaras[i].addEventListener("click", ()=>{
                 addLayer(i, 0, "Cara");
             })
         }
@@ -53,7 +53,7 @@ async function setup() {
 
     for(let i = 0; i < 74 ; i++){
         if(imgOjos[i]){
-            imgOjos[i].addEventListener("click", ()=>{
+            await imgOjos[i].addEventListener("click", ()=>{
                 addLayer(i, 54, "Ojos");
             })
         }
@@ -61,7 +61,7 @@ async function setup() {
 
     for(let i = 0; i < 30 ; i++){
         if(imgCejas[i]){
-            imgCejas[i].addEventListener("click", ()=>{
+            await imgCejas[i].addEventListener("click", ()=>{
                 addLayer(i, 128, "Cejas");
             })
         }
@@ -69,7 +69,7 @@ async function setup() {
 
     for(let i = 0; i < 24 ; i++){
         if(imgNarices[i]){
-            imgNarices[i].addEventListener("click", ()=>{
+            await imgNarices[i].addEventListener("click", ()=>{
                 addLayer(i, 158, "Nariz");
             })
         }
