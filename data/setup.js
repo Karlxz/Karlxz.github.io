@@ -223,7 +223,7 @@ function setup() {
     for(let i = 0; i < 12 ; i++){
         if(imgAretes[i]){
             imgAretes[i].addEventListener("click", ()=>{
-                addLayer(i, 332, "Aretes");
+                addLayer(i, 531, "Aretes");
             })
         }
     }
