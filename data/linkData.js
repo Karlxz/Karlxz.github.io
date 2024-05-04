@@ -26,9 +26,20 @@ let imgSombreros = document.querySelectorAll("#sombreros");
 let divMasc = document.querySelector(".masc");
 let divFem = document.querySelector(".fem");
 
+function putLabel(i, offset, imgAppend){
+    var splitLink = openData(i + offset).split("_");
+    var label = splitLink[0][splitLink[0].length - 2] + splitLink[0][splitLink[0].length - 1] + '_' + splitLink[1][0] + splitLink[1][1] + splitLink[1][2] + splitLink[1][3] + splitLink[1][4];
+    var br = document.createElement('br');
+    var p = document.createElement('p');    
+    p.append(label);
+    imgAppend.insertAdjacentElement('afterend', br);
+    imgAppend.insertAdjacentElement('afterend', p);
+}
+
 function putSource(menu, num, offset){
     for (let i = 0; i < num; i++){
         menu[i].src = openData(i + offset);
+        putLabel(i, offset, menu[i]);
     }
 }
 

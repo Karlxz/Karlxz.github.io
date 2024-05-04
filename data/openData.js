@@ -10,7 +10,7 @@ function openData(imagen){
         "https://Karlxz.github.io/img/caras/masculino/I1_M0100.png",    //6
         "https://Karlxz.github.io/img/caras/masculino/H2_M1171.png",    //7
         "https://Karlxz.github.io/img/caras/masculino/H1_M0313.png",    //8
-        "https://Karlxz.github.io/img/caras/masculino/G5_M0646.png",    //9
+        "https://Karlxz.github.io/img/caras/masculino/G3_M1185.png",    //9
         "https://Karlxz.github.io/img/caras/masculino/G3_M1185.png",    //10
         "https://Karlxz.github.io/img/caras/masculino/G1_M0371.png",    //11
         "https://Karlxz.github.io/img/caras/masculino/F3_M1266.png",    //12
