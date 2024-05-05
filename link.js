@@ -1,0 +1,3 @@
+setup().then(function(){
+    caramex();
+})

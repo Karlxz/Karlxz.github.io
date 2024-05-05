@@ -27,8 +27,8 @@ let divMasc = document.querySelector(".masc");
 let divFem = document.querySelector(".fem");
 
 function putLabel(i, offset, imgAppend){
-    var splitLink = openData(i + offset).split("_");
-    var label = splitLink[0][splitLink[0].length - 2] + splitLink[0][splitLink[0].length - 1] + '_' + splitLink[1][0] + splitLink[1][1] + splitLink[1][2] + splitLink[1][3] + splitLink[1][4];
+    var label = openData(i+offset).split("/");
+    label = label[label.length-1].split(".")[0];
     var br = document.createElement('br');
     var p = document.createElement('p');    
     p.append(label);
