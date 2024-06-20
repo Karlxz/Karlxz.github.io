@@ -59,10 +59,22 @@ function setup(){
 
     sideMenuData.style.display = "none";
 
-    document.querySelector("#optTranslate").classList.toggle('animation');
+
+    //Show Data
+    // putSource(imgCaras,54,0);
+
+    
+    
+    
 
     return new Promise((resolve, reject) => {
         resolve()
     });
 }
 
+
+function iframeLoaded(pp) {
+    let wnd = pp.contentWindow;
+    console.log("I enter iframe");
+    window.addEventListener("message", onMessage);
+}

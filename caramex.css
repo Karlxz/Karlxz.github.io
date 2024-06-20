@@ -8,19 +8,27 @@
     background: transparent;
 }
 
+.titulo{
+    background-color: #F3EEEA;
+    width: 100%;
+    height: auto;
+}
+
 h1{
-    background-color: rgb(240, 240, 240);
-    color: rgb(102, 58, 58);
+    /* background-color: rgb(240, 240, 240); */ 
+    color: #776B5D;
     font-size: 28px;
 }
 
 ::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
+    background: #B0A695;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px rgb(154, 153, 153); 
+    box-shadow: inset 0 0 5px rgb(255, 255, 255); 
     border-radius: 10px;
   }
    
@@ -41,36 +49,64 @@ h1{
 }
 
 .conteiner{
-    background-color: aqua;
+    /* background-color: aqua; */
     width: 100%;
-    height: 800px;
+    height: 810px;
+    /* position: relative; */
     display: flex;
 }
 
 .menu{
-    background-color: beige;
+    /* background-color: beige; */
     width: 3.4%;
     /* width: 20%; */
     height: 100%;
     display: flex;
+    /* position: relative; */
 }
 
 /* Menu de img grandotas para elegir que solo sale cuando se da click */
 .imgDataPreview{
-    /* background-color: chartreuse; */
+    background-color: #F3EEEA;
     width: 0%;
     height: 100%;
+    /* position: absolute; */
 }
 
 .dataMenu{
     width: 100%;
     height: 100%;
-    display: none;
+    /* display: none; */
+}
+
+.label{
+    font-size: x-small;
 }
 
 .top{
     width: 100%;
     height: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgTitle{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.btnSexo{
+    background-color: #EBE3D5;
+    height: 30px;
+    width: 70px;
+    margin: 0px 5px;
+    border-radius: 10px;
+    border: 1px solid #776B5D;
+    cursor: pointer;
+    font-size: x-small;
 }
 
 .masc{
@@ -103,15 +139,17 @@ h1{
   }
 
 .imgData{
-    border: 1px none #FFF;
+    /* border: 1px solid #000; */
+    /* background-color: #eee4e4; */
     border-radius: 15px;
     width: 70%;
     cursor: pointer;
+    margin-top: 7px;
 }
 
 /* Parte del menu izquierda de las img chiquitas */
 .sideMenuPreview{    /* Este contenedor incluye la scrollbar */
-    background-color: rgb(237, 237, 153);
+    background-color: #F3EEEA;
     height: 100%;
     width: 100%;
     /* width: 17%; */
@@ -131,16 +169,17 @@ h1{
 }
 
 .imgPreview{    /* Y ya estas son las imagenes como tal */
-    background-color: rgb(255, 255, 255);
+    background-color: #F3EEEA;
     width: calc(100%/1);
     /* height: 52px; */
     height: 55px;
-    border: 2px solid darkblue;
+    border: 2px solid #776B5D;
     margin: 3px 0px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 #menuPiel{
@@ -155,21 +194,21 @@ h1{
     width: 90%;
     /* height: 100%; */
     /* box-sizing: border-box; */
-    object-fit: cover;
+    object-fit: contain;
 }
 
 
 
 /* Parte del canvas mas la parte de interaccion */
 .imgInteraction{
-    background-color: rgb(133, 78, 78);
+    background-color: #EBE3D5;
     height: 100%;
     width: 76.6%;
     /* display: flex; */
 }
 
 .canvasSec{
-    background-color: burlywood;
+    /* background-color: #F1E5D1; */
     width: 100%;
     height: 85%;
     display: flex;
@@ -181,11 +220,19 @@ h1{
     background-color: #FFF;
     width: 70%;
     height: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.imgCanvas{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 .optionsBarSec{
-    background-color: wheat;
+    /* background-color: wheat; */
     width: 100%;
     height: 15%;
     display: flex;
@@ -193,21 +240,215 @@ h1{
     justify-content: center;
 }
 
+.optConteiner{
+    background-color: aliceblue;
+    width: 280px;
+    /* width: 490px; */
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    animation: expandOpt 0.5s forwards;
+    animation-delay: 1s;
+}
+
 .optionsBar{
     background-color: aliceblue;
-    width: 30%;
-    height: 40%;
+    width: 100%;
+    height: auto;
     display: flex;
+    justify-content: space-between;
+    position: absolute;
+}
+
+.hidOpt{
+    right: -490px;
+}
+
+.optDiv{
+    background-color: #F3EEEA;
+    box-sizing: border-box;
+    border: 2px solid #776B5D;
+    height: 50px;
+    width: 50px;
+    margin: 0px 10px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+#translate{
+    background-image: url('https://Karlxz.github.io/img/translate.png');
+}
+
+#subTranslate{
+    background-image: url('https://Karlxz.github.io/img/translate.png');
+    /* margin: ; */
+}
+
+#resize{
+    background-image: url('https://Karlxz.github.io/img/resize.png');
+}
+
+#subResize{
+    background-image: url('https://Karlxz.github.io/img/resize.png');
+    /* margin: ; */
+}
+
+#rotate{
+    background-image: url('https://Karlxz.github.io/img/rotate.png');
+}
+
+#subRotate{
+    background-image: url('https://Karlxz.github.io/img/rotate.png');
+}
+
+#opacity{
+    background-image: url('https://Karlxz.github.io/img/opacity.png');
+}
+
+#upTrans{
+    background-image: url('https://Karlxz.github.io/img/up.png');
+}
+
+#downTrans{
+    background-image: url('https://Karlxz.github.io/img/down.png');
+}
+
+#leftTrans{
+    background-image: url('https://Karlxz.github.io/img/left.png');
+}
+
+#rightTrans{
+    background-image: url('https://Karlxz.github.io/img/right.png');
+}
+
+#shrinkDownRes{
+    background-image: url('https://Karlxz.github.io/img/shrinkDown.png');
+}
+
+#expandUpRes{
+    background-image: url('https://Karlxz.github.io/img/shrinkUp.png');
+}
+
+#shrinkInRes{
+    background-image: url('https://Karlxz.github.io/img/shrinkIn.png');
+}
+
+#expandOutRes{
+    background-image: url('https://Karlxz.github.io/img/shrinkOut.png');
+}
+
+#shrinkRes{
+    background-image: url('https://Karlxz.github.io/img/shrink.png');
+}
+
+#expandRes{
+    background-image: url('https://Karlxz.github.io/img/expand.png');
+}
+
+#rotateRight{
+    background-image: url('https://Karlxz.github.io/img/rotateRight.png');
+}
+
+#rotateLeft{
+    background-image: url('https://Karlxz.github.io/img/rotateLeft.png');
 }
 
 
-.conteiner .layersMenu{
-    background-color: rgb(128, 83, 171);
+
+
+.otherOptions{
+    background-color: #B0A695;
     height: 100%;
     width: 20%;
     align-self: flex-end;
     display: flex;
+    flex-direction: column;
 }
+
+.other{
+    background-color: antiquewhite;
+    height: calc(100%/2);
+    width: 100%;
+}
+
+.layersMenu{
+    height: calc(100%/2);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: auto;
+}
+
+.layerTitleCont{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.layerTitle{
+    font-size: large;
+    margin: 5px 0px;
+}
+
+.layerCont{
+    /* background-color: aqua; */
+    width: 100%;
+    height: 100%;
+}
+
+.layer{
+    background-color: azure;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border: 2px 0px;
+    border: solid #776B5D;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.layerImg{
+    height: 40px;
+    width: 50px;
+    object-fit: contain;
+    border: 2px dashed #B0A695;
+    box-sizing: border-box;
+    margin-left: 2.5px;
+}
+
+.layerNameCont{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.layerName{
+    margin-left: 20px;
+}
+
+#photopea{
+    /* display: none; */
+}
+
+
+
+
+
+
+
+
+
 
 
 

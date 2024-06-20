@@ -665,6 +665,9 @@ function openData(imagen){
     ];
 
     return carasMascRef[imagen];
+    // return new Promise(function(resolve, reject) {
+    //     resolve(carasMascRef[imagen]);
+    // });
 }   
 
 
