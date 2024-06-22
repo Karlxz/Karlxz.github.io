@@ -3,6 +3,51 @@ wnd = photopea.contentWindow
 let actual = [-1]
 let layers = []
 
+function shift_layer(dir)
+{
+
+}
+
+function arrangeLayer(dir){
+    let script = `var where = ElementPlacement.PLACEBEFORE
+    var currentActiveLayer = app.activeDocument.activeLayer;
+    var layerRef = app.activeDocument.layers[${dir}+1];
+    currentActiveLayer.move(layerRef, where);`
+    return script
+}
+
+
+
+function reArrangeLayers(itm, posPrev){
+    let posAct = findLayer(itm)
+    if(posAct != posPrev){
+        if(posAct > posPrev){
+            Photopea.runScript(wnd, arrangeLayer(posAct))
+            .then(() => {setTimeout(() => {Photopea.saveImage(wnd, document.querySelector("#img"))}, 60)})
+        }else if(posAct < posPrev){
+            Photopea.runScript(wnd, arrangeLayer(posAct-1))
+            .then(() => {setTimeout(() => {Photopea.saveImage(wnd, document.querySelector("#img"))}, 60)})    
+        }
+    }
+    console.log("RE ACOMODE CAPAS", itm.getElementsByClassName('layerName')[0].textContent)
+    console.log("Esta en la pos: ", findLayer(itm))
+
+}
+
+function findLayer(itm){
+    let totalLayers = document.querySelectorAll(".layer");
+    for(let i = 0; i < totalLayers.length; i++){
+        if(itm.getElementsByClassName('layerName')[0].textContent == totalLayers[i].getElementsByClassName('layerName')[0].textContent){
+            return i;
+        }
+    }
+}
+
+
+
+
+
+
 async function layer(name){
     var myPromise = new Promise((resolve, reject) => {
         layers.push(name)
@@ -27,16 +72,19 @@ function createLayer(url, layerName){
         let layerDiv = document.createElement('div');
         let layerImg = document.createElement('img');
         let layerP = document.createElement('p');
-        layerDiv.classList.add('layer');
+        let dragDiv = document.createElement('div');
+        layerDiv.classList.add('layer', 'list__item', 'is-idle', 'js-item');
         layerDiv.addEventListener(("click"), (e) => {
             Photopea.runScript(wnd, `app.activeDocument.activeLayer = app.activeDocument.layers.getByName("${layerName}");`);
         })
         layerImg.classList.add('layerImg');
         layerP.classList.add('layerName');
+        dragDiv.classList.add('drag-handle', 'js-drag-handle');
         layerImg.src = url;
         layerP.textContent = layerName;
         layerDiv.insertAdjacentElement('beforeend', layerImg);
         layerDiv.insertAdjacentElement('beforeend', layerP);
+        layerDiv.insertAdjacentElement('beforeend', dragDiv);
         layerCont.insertAdjacentElement('afterbegin', layerDiv);
     }else{
         let allLayers = document.querySelectorAll('.layer');
@@ -46,6 +94,8 @@ function createLayer(url, layerName){
             }
         }
     }
+    // createSortable('.layerCont');
+
 }
 
 function putSource(data){
@@ -270,3 +320,15 @@ function caramex(){
 
     // alert(document.getElementById("optTranslate").style.right);
 }
+
+
+
+
+function moveLayer(i){
+    
+}
+
+
+
+
+

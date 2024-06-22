@@ -268,56 +268,65 @@ function setup() {
 }
 
 
-// if(app.activeDocument.layers.getByName("Cara").name!=app.activeDocument.layers.getByName(app.activeDocument.layers[app.activeDocument.layers.length-2].name).name)
-// {
-// let layer = app.activeDocument.layers.getByName("Cara");
-// app.activeDocument.layers.getByName(app.activeDocument.layers[app.activeDocument.layers.length-2].name) = layer;
-// app.activeDocument.layers.getByName("Cara") = app.activeDocument.layers.getByName(app.activeDocument.layers[app.activeDocument.layers.length-2].name);
-// }      
+if(app.activeDocument.layers.getByName("Cara").name!=app.activeDocument.layers.getByName(app.activeDocument.layers[app.activeDocument.layers.length-2].name).name)
+{
+let layer = app.activeDocument.layers.getByName("Cara");
+app.activeDocument.layers.getByName(app.activeDocument.layers[app.activeDocument.layers.length-2].name) = layer;
+app.activeDocument.layers.getByName("Cara") = app.activeDocument.layers.getByName(app.activeDocument.layers[app.activeDocument.layers.length-2].name);
+}      
 
 // Switch off any dialog boxes
-// displayDialogs = DialogModes.ALL; // OFF 
+displayDialogs = DialogModes.ALL; // OFF 
 
-// shift_layer(-1);
-
-
-// // Set Display Dialogs back to normal
-// displayDialogs = DialogModes.ALL; // NORMAL
+shift_layer(-1);
 
 
-// // function SHIFT LAYER (direction)
-// // --------------------------------------------------------
-// function shift_layer(direction)
-// {
-//   // direction =  1 Moves layer up 1 place to top
-//   // direction = -1 Moves layer down 1 place to background
+// Set Display Dialogs back to normal
+displayDialogs = DialogModes.ALL; // NORMAL
 
-//   if(direction == undefined) return -1;
+
+// function SHIFT LAYER (direction)
+// --------------------------------------------------------
+function shift_layer(dir)
+{
+  // direction =  1 Moves layer up 1 place to top
+  // direction = -1 Moves layer down 1 place to background
+
+  if(dir == undefined) return -1;
 
 //   var where  = (direction > 0) ? ElementPlacement.PLACEBEFORE : ElementPlacement.PLACEAFTER;
+    var where = ElementPlacement.PLACEBEFORE
 
-//   var currentActiveLayer = app.activeDocument.activeLayer;
-//   var idx = get_layer_index(currentActiveLayer);
-
-//   // Get a reference to the active layer
-//   var layerRef = app.activeDocument.layers[app.activeDocument.layers.length-2];
-
-//   // Move the new layer set to after the previously first layer
-//   currentActiveLayer.move(layerRef, where);
-// }
+    var currentActiveLayer = app.activeDocument.activeLayer;
 
 
-// function get_layer_index(ref)
-// {
-//   var numOfArtLayers = app.activeDocument.layers.length;
+    // var idx = get_layer_index(currentActiveLayer);
 
-//   // work from the top of the stack down!
-//   for (var i = numOfArtLayers -1; i >= 0; i--)
-//   {
-//     var tempLayer = app.activeDocument.layers[i];
-//     if (tempLayer == ref) return i;
-//   }
+    var layerRef = app.activeDocument.layers[dir+1];
+
+
+  // Get a reference to the active layer
+//   var layerRef = app.activeDocument.layers[idx-direction];
+
+  // Move the new layer set to after the previously first layer
+  currentActiveLayer.move(layerRef, where);
+}
+
+
+function get_layer_index(ref)
+{
+  var numOfArtLayers = app.activeDocument.layers.length;
+
+  // work from the top of the stack down!
+  for (var i = numOfArtLayers -1; i >= 0; i--)
+  {
+    var tempLayer = app.activeDocument.layers[i];
+    if (tempLayer == ref){
+        
+        return i;
+    }
+  }
   
-// }
+}
 
-// shift_layer(1);
+shift_layer(i);
