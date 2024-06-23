@@ -3,12 +3,32 @@ wnd = photopea.contentWindow
 let actual = [-1]
 let layers = []
 
-function shift_layer(dir)
-{
+let difSex = false
+let firstImgMasc = true
+let putLayer = true
 
+function checkFirstImg(i, sex){
+    console.log("Antes de poner la primer capa: ", document.querySelectorAll('.layer').length)
+    if(document.querySelectorAll('.layer').length == 0){
+        if (i < sex[0]) firstImgMasc = true;
+        else firstImgMasc = false;
+    }else if (document.querySelectorAll('.layer').length >= 1 && difSex == false){
+        if ((firstImgMasc == true && i < sex[0]) || (firstImgMasc == false && i >= sex[0])){
+            putLayer = true
+        }else{
+            if(firstImgMasc == true && i >= sex[0]){
+                difSex = confirm("Hasta ahorita has trabajado con facciones masculinas. ¿Seguro que quieres alternar facciones?")
+            }else{
+                difSex = confirm("Hasta ahorita has trabajado con facciones femeninas. ¿Seguro que quieres alternar facciones?")
+            }
+            if(difSex)putLayer = true
+            else putLayer = false
+        }
+    }
 }
 
-function arrangeLayer(dir){
+
+function arrangeLayerScript(dir){
     let script = `var where = ElementPlacement.PLACEBEFORE
     var currentActiveLayer = app.activeDocument.activeLayer;
     var layerRef = app.activeDocument.layers[${dir}+1];
@@ -16,16 +36,14 @@ function arrangeLayer(dir){
     return script
 }
 
-
-
 function reArrangeLayers(itm, posPrev){
     let posAct = findLayer(itm)
     if(posAct != posPrev){
         if(posAct > posPrev){
-            Photopea.runScript(wnd, arrangeLayer(posAct))
+            Photopea.runScript(wnd, arrangeLayerScript(posAct))
             .then(() => {setTimeout(() => {Photopea.saveImage(wnd, document.querySelector("#img"))}, 60)})
         }else if(posAct < posPrev){
-            Photopea.runScript(wnd, arrangeLayer(posAct-1))
+            Photopea.runScript(wnd, arrangeLayerScript(posAct-1))
             .then(() => {setTimeout(() => {Photopea.saveImage(wnd, document.querySelector("#img"))}, 60)})    
         }
     }
@@ -43,14 +61,27 @@ function findLayer(itm){
     }
 }
 
-
-
-
+function deleteLayer(ind){
+    console.log("capa a eliminar: ", ind)
+    let totalLayers = document.querySelectorAll(".layer");
+    for(let i = 0; i < totalLayers.length; i++){
+        if(i == ind){
+            console.log("Ya se va a eliminar eh: ", i)
+            totalLayers[i].remove()
+            Photopea.runScript(wnd, `app.activeDocument.layers.getByName("${totalLayers[i].getElementsByClassName('layerName')[0].textContent}").remove();`)
+            .then(() => {setTimeout(() => {Photopea.saveImage(wnd, document.querySelector("#img"))}, 60)})
+            const index = layers.indexOf(totalLayers[i].getElementsByClassName('layerName')[0].textContent);
+            const x = layers.splice(index, 1); 
+            console.log(layers)
+        }
+    }
+}
 
 
 async function layer(name){
     var myPromise = new Promise((resolve, reject) => {
         layers.push(name)
+        console.log(layers)
         resolve()
     })
     var returnedPromise = await myPromise
@@ -70,22 +101,32 @@ function createLayer(url, layerName){
     if(!layers.includes(layerName)){
         let layerCont = document.querySelector('.layerCont');
         let layerDiv = document.createElement('div');
+        let layerDelete = document.createElement('p');
         let layerImg = document.createElement('img');
-        let layerP = document.createElement('p');
+        let layerText = document.createElement('p');
         let dragDiv = document.createElement('div');
         layerDiv.classList.add('layer', 'list__item', 'is-idle', 'js-item');
         layerDiv.addEventListener(("click"), (e) => {
             Photopea.runScript(wnd, `app.activeDocument.activeLayer = app.activeDocument.layers.getByName("${layerName}");`);
         })
+        layerDelete.classList.add('deleteLayer');
         layerImg.classList.add('layerImg');
-        layerP.classList.add('layerName');
+        layerText.classList.add('layerName');
         dragDiv.classList.add('drag-handle', 'js-drag-handle');
         layerImg.src = url;
-        layerP.textContent = layerName;
+        layerText.textContent = layerName;
+        layerDelete.textContent = "X";
+        layerDiv.insertAdjacentElement('beforeend', layerDelete);
         layerDiv.insertAdjacentElement('beforeend', layerImg);
-        layerDiv.insertAdjacentElement('beforeend', layerP);
+        layerDiv.insertAdjacentElement('beforeend', layerText);
         layerDiv.insertAdjacentElement('beforeend', dragDiv);
         layerCont.insertAdjacentElement('afterbegin', layerDiv);
+        layerDelete.addEventListener(("click"), (e) => {
+            e.stopPropagation();
+            // let totalLayers = document.querySelectorAll(".layer");
+            let ind = findLayer(layerDiv);
+            deleteLayer(ind);
+        })
     }else{
         let allLayers = document.querySelectorAll('.layer');
         for(let i = 0; i < allLayers.length; i++){
@@ -94,8 +135,6 @@ function createLayer(url, layerName){
             }
         }
     }
-    // createSortable('.layerCont');
-
 }
 
 function putSource(data){
@@ -152,22 +191,30 @@ function putSource(data){
             img.classList.add('imgData');
             let url = openData(i + data.inicio);
             img.src = url;
-            let layerCountOld
             img.addEventListener("click", (e) => {
-                if(layers.includes(data.id)){
-                    addImageAndWait(wnd, url)
-                    .then(() => Photopea.runScript(wnd, data.script))
-                    .then(() => Photopea.runScript(wnd, `app.activeDocument.layers.getByName("${data.id}").remove();`))
-                    .then(() => Photopea.runScript(wnd, `app.activeDocument.activeLayer.name = "${data.id}";`))
-                    .then(() => {setTimeout(() => {Photopea.saveImage(wnd, document.querySelector("#img"))}, 60)})
+                if(!difSex)checkFirstImg(i, data.sexo);                
+
+                if(putLayer){
+                    console.log("SE PUSO LA CAPA")
+                    if(layers.includes(data.id)){
+                        addImageAndWait(wnd, url)
+                        .then(() => Photopea.runScript(wnd, arrangeLayerScript(-1)))
+                        .then(() => Photopea.runScript(wnd, data.script))
+                        .then(() => Photopea.runScript(wnd, `app.activeDocument.layers.getByName("${data.id}").remove();`))
+                        .then(() => Photopea.runScript(wnd, `app.activeDocument.activeLayer.name = "${data.id}";`))
+                        .then(() => {setTimeout(() => {Photopea.saveImage(wnd, document.querySelector("#img"))}, 60)})
+                    }else{
+                        addImageAndWait(wnd, url)
+                        .then(() => Photopea.runScript(wnd, arrangeLayerScript(-1)))
+                        .then(() => Photopea.runScript(wnd, data.script))
+                        .then(() => Photopea.runScript(wnd, `app.activeDocument.activeLayer.name = "${data.id}";`))
+                        .then(() => layer(data.id))
+                        .then(() => {setTimeout(() => {Photopea.saveImage(wnd, document.querySelector("#img"))}, 60)})
+                    }
+                    createLayer(url, data.id)             
                 }else{
-                    addImageAndWait(wnd, url)
-                    .then(() => Photopea.runScript(wnd, data.script))
-                    .then(() => Photopea.runScript(wnd, `app.activeDocument.activeLayer.name = "${data.id}";`))
-                    .then(() => layer(data.id))
-                    .then(() => {setTimeout(() => {Photopea.saveImage(wnd, document.querySelector("#img"))}, 60)})
+                    console.log("NO SE PUSO LA CAPA")
                 }
-                createLayer(url, data.id)             
             })
             if(i < data.sexo[0]){
                 if(i <= Math.ceil(data.sexo[0]/2)-1){
@@ -317,15 +364,6 @@ function caramex(){
             movement(i)
         })
     }
-
-    // alert(document.getElementById("optTranslate").style.right);
-}
-
-
-
-
-function moveLayer(i){
-    
 }
 
 
