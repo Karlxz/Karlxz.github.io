@@ -88,7 +88,6 @@ function movement(opt){
                     }
                 })
             }
-
             break;
 
         case 1:

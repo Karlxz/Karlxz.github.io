@@ -1,14 +1,17 @@
+//VARIABLES GLOBALES AUXILIARES
 let photopea = document.querySelector("#photopea");
 wnd = photopea.contentWindow
 let actual = [-1]
 let layers = []
 
+
+//PARTE QUE SE ENCARGA DE DAR AVISO SI SE INTENTA ALTERNAR FACCIONES MASCULINAS Y FEMENINAS
 let difSex = false
 let firstImgMasc = true
 let putLayer = true
 
 function checkFirstImg(i, sex){
-    console.log("Antes de poner la primer capa: ", document.querySelectorAll('.layer').length)
+    // console.log("Antes de poner la primer capa: ", document.querySelectorAll('.layer').length)
     if(document.querySelectorAll('.layer').length == 0){
         if (i < sex[0]) firstImgMasc = true;
         else firstImgMasc = false;
@@ -28,6 +31,7 @@ function checkFirstImg(i, sex){
 }
 
 
+//PARTE QUE SE ENCARGA DE REORDENAR LAS CAPAS
 function arrangeLayerScript(dir){
     let script = `var where = ElementPlacement.PLACEBEFORE
     var currentActiveLayer = app.activeDocument.activeLayer;
@@ -47,11 +51,13 @@ function reArrangeLayers(itm, posPrev){
             .then(() => {setTimeout(() => {Photopea.saveImage(wnd, document.querySelector("#img"))}, 60)})    
         }
     }
-    console.log("RE ACOMODE CAPAS", itm.getElementsByClassName('layerName')[0].textContent)
-    console.log("Esta en la pos: ", findLayer(itm))
+    // console.log("RE ACOMODE CAPAS", itm.getElementsByClassName('layerName')[0].textContent)
+    // console.log("Esta en la pos: ", findLayer(itm))
 
 }
 
+
+//ENCUENTRA EL INDICE DE CIERTA CAPA
 function findLayer(itm){
     let totalLayers = document.querySelectorAll(".layer");
     for(let i = 0; i < totalLayers.length; i++){
@@ -61,27 +67,32 @@ function findLayer(itm){
     }
 }
 
+
+//ELIMINA LA CAPA i
 function deleteLayer(ind){
-    console.log("capa a eliminar: ", ind)
+    let layerCont = document.querySelector('.layerCont');
+    // console.log("capa a eliminar: ", ind)
     let totalLayers = document.querySelectorAll(".layer");
     for(let i = 0; i < totalLayers.length; i++){
         if(i == ind){
-            console.log("Ya se va a eliminar eh: ", i)
             totalLayers[i].remove()
             Photopea.runScript(wnd, `app.activeDocument.layers.getByName("${totalLayers[i].getElementsByClassName('layerName')[0].textContent}").remove();`)
             .then(() => {setTimeout(() => {Photopea.saveImage(wnd, document.querySelector("#img"))}, 60)})
             const index = layers.indexOf(totalLayers[i].getElementsByClassName('layerName')[0].textContent);
             const x = layers.splice(index, 1); 
-            console.log(layers)
+            console.log("Capa eliminada: ", x)
+            // console.log(layers)
         }
     }
+    console.log("ESTE ES EL CONTENEDOR DE CAPAS CADA QUE SE ELIMINA UNA", layerCont)
 }
 
 
+//AGREGA NUEVA CAPA A LA VARIABLE GLOBAL QUE MANTIENE REGISTRO DE LAS CAPAS ACTUALES
 async function layer(name){
     var myPromise = new Promise((resolve, reject) => {
         layers.push(name)
-        console.log(layers)
+        // console.log(layers)
         resolve()
     })
     var returnedPromise = await myPromise
@@ -97,9 +108,12 @@ function putLabel(url){
     return p
 }
 
+//AQUI SE CREAN LOS ELEMENTOS QUE SERAN LAS CAPAS
 function createLayer(url, layerName){
     if(!layers.includes(layerName)){
+        //Se obtiene el contenedor
         let layerCont = document.querySelector('.layerCont');
+
         let layerDiv = document.createElement('div');
         let layerDelete = document.createElement('p');
         let layerImg = document.createElement('img');
@@ -127,6 +141,7 @@ function createLayer(url, layerName){
             let ind = findLayer(layerDiv);
             deleteLayer(ind);
         })
+        console.log("ESTE ES EL CONTENEDOR DE CAPAS CADA QUE SE CREA UNA", layerCont)
     }else{
         let allLayers = document.querySelectorAll('.layer');
         for(let i = 0; i < allLayers.length; i++){
@@ -137,6 +152,8 @@ function createLayer(url, layerName){
     }
 }
 
+
+//AQUI ES DONDE SE MUESTRA EL MENU DE TODAS LAS FACCIONES QUE SE TIENEN CON AYUDA DE LA DATA
 function putSource(data){
     let conteiner = document.querySelector(".imgDataPreview");
     while (conteiner.lastElementChild) {
@@ -144,9 +161,10 @@ function putSource(data){
     }
 
     if(data.sexo.length != 0){
+        //TODO LO RELACIONADO CON FEMENINO Y MASCULINO
         let masc = document.createElement('div');
         masc.classList.add('masc');
-        masc.style.display = "block";
+        // masc.style.display = "block";
         let izqM = document.createElement('div');
         izqM.classList.add('izq');
         let derM = document.createElement('div');
@@ -154,17 +172,31 @@ function putSource(data){
         
         let fem = document.createElement('div');
         fem.classList.add('fem');
-        fem.style.display = "none";
+        // fem.style.display = "none";
         let izqF = document.createElement('div');
         izqF.classList.add('izq');
         let derF = document.createElement('div');
         derF.classList.add('der');
 
+        //ACCION DE LOS BOTONES DE SEXO SEGUN LA PRIMERA FACCION ESCOGIDA
+        if(firstImgMasc){
+            masc.style.display = "block";
+            fem.style.display = "none";
+        }else{
+            masc.style.display = "none";
+            fem.style.display = "blockz";
+        }
+
+        //TODO LA PARTE DE ARRIBA
         let top = document.createElement('div');
         top.classList.add('top');
+        let imgTitleConteiner = document.createElement('div');
+        imgTitleConteiner.classList.add('imgTitleConteiner');
         let imgTitle = document.createElement('h2');
         imgTitle.classList.add('imgTitle');
         imgTitle.append(data.id)
+        let btnSexConteiner = document.createElement('div');
+        btnSexConteiner.classList.add('btnSexConteiner');
         let mascBtn = document.createElement('button');
         mascBtn.textContent = "Masc"
         mascBtn.classList.add('btnSexo')
@@ -181,11 +213,14 @@ function putSource(data){
             masc.style.display = "none";
             fem.style.display = "block";
         })
-        top.insertAdjacentElement('beforeend', imgTitle);
-        top.insertAdjacentElement('beforeend', mascBtn);
-        top.insertAdjacentElement('beforeend', femBtn);
+        imgTitleConteiner.insertAdjacentElement('beforeend', imgTitle);
+        top.insertAdjacentElement('beforeend', imgTitleConteiner);
+        btnSexConteiner.insertAdjacentElement('beforeend', mascBtn);
+        btnSexConteiner.insertAdjacentElement('beforeend', femBtn);
+        top.insertAdjacentElement('beforeend', btnSexConteiner);
         conteiner.insertAdjacentElement('beforeend', top);
 
+        //PARTE DE LAS IMAGENES
         for (let i = 0; i < data.total; i++){
             let img = document.createElement('img');
             img.classList.add('imgData');
@@ -289,9 +324,8 @@ function putSource(data){
 
 }
 
+//PARTE QUE SE ENCARGA DE ABRIR O CERRAR LOS MENUS DE LAS FACCIONES
 function openMenu(i){
-    // actual.push(i);
-    console.log(actual)
     let data = getCharData(i);
 
     if(menu.offsetWidth <= Math.ceil(conteiner.offsetWidth*0.034)){
@@ -310,12 +344,12 @@ function openMenu(i){
             putSource(data);
         }
     }
-    console.log("LLEGO AL FINAL")
     actual[0] = i;
 }
 
-function caramex(){
 
+//FUNCION PRINCIPAL
+function caramex(){
     for(let i=0; i < btnMasc.length; i++){
         if (btnMasc[i]){
             btnMasc[i].addEventListener("click", ()=>{
@@ -351,6 +385,10 @@ function caramex(){
     let menuPrev = document.querySelectorAll(".imgPrev");
     
     for(let i = 0; i < menuPrev.length; i++){
+        let imgPrevId = document.createElement('p');
+        imgPrevId.classList.add('imgPrevLabel');
+        imgPrevId.append(getCharData(i).id);
+        menuPrev[i].parentNode.insertAdjacentElement('beforeend', imgPrevId);
         menuPrev[i].parentNode.addEventListener("click", (e) => {
             openMenu(i);
         })

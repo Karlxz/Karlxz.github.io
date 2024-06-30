@@ -14,7 +14,7 @@ let pointerStartY
 let itemsGap = 0
 
 let items = []
-
+  
 let prevRect = {}
 
 let posPrev
@@ -63,6 +63,8 @@ function setup() {
  ***********************/
 
 function dragStart(e) {
+  items = []
+  // console.log("ANTES DE QUE TERMINE ESTO", listContainer)
   if (e.target.classList.contains('js-drag-handle')) {
     draggableItem = e.target.closest('.js-item')
     // console.log(draggableItem)
@@ -103,9 +105,9 @@ function setItemsGap() {
 }
 
 function disablePageScroll() {
-  document.body.style.overflow = 'hidden'
-  document.body.style.touchAction = 'none'
-  document.body.style.userSelect = 'none'
+  // document.body.style.overflow = 'hidden'
+  // document.body.style.touchAction = 'none'
+  // document.body.style.userSelect = 'none'
 }
 
 function initItemsState() {
@@ -183,8 +185,8 @@ function updateIdleItemsStateAndPosition() {
 
 function dragEnd(e) {
   if (!draggableItem) return
-
   applyNewItemsOrder(e)
+  // console.log("DESPUES DE QUE TERMINE ESTO", listContainer)
   cleanup()
   reArrangeLayers(draggableItem, posPrev)
 }
